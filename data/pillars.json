@@ -43,24 +43,24 @@
       "en": "Get the most from your rig: which PC to build, how many FPS it'll push, and how to tune your DPI and sensitivity to aim better."
     },
     "body": {
-      "es": "<p>El <strong>hardware</strong> es la mitad invisible del rendimiento. Un PC bien equilibrado y una sensibilidad bien ajustada marcan la diferencia entre frustrarte y disfrutar.</p><p>En esta sección te ayudamos a <strong>elegir qué PC montar</strong> según tu uso y presupuesto, a estimar qué <strong>FPS</strong> conseguirás y a afinar tu <strong>DPI y sensibilidad</strong> para que tu puntería sea consistente en todos tus juegos.</p>",
-      "en": "<p><strong>Hardware</strong> is the invisible half of performance. A well-balanced PC and a well-tuned sensitivity are the difference between frustration and fun.</p><p>This section helps you <strong>choose which PC to build</strong> for your use and budget, estimate the <strong>FPS</strong> you'll get, and fine-tune your <strong>DPI and sensitivity</strong> so your aim stays consistent across all your games.</p>"
+      "es": "<p>El <strong>equipo</strong> es la mitad invisible del rendimiento. El ordenador adecuado y una sensibilidad bien ajustada marcan la diferencia entre frustrarte y disfrutar.</p><p>En esta sección te ayudamos a decidir <strong>qué ordenador comprar</strong> según tu uso (gaming, edición, programación) con análisis honestos, y a afinar tu <strong>sensibilidad y eDPI</strong> —además de medir tu reacción y tus clics— para que tu puntería sea consistente en todos tus juegos.</p>",
+      "en": "<p>Your <strong>setup</strong> is the invisible half of performance. The right computer and a well-tuned sensitivity are the difference between frustration and fun.</p><p>This section helps you decide <strong>which computer to buy</strong> for your use (gaming, editing, programming) with honest analysis, and fine-tune your <strong>sensitivity and eDPI</strong> —plus measure your reaction and clicks— so your aim stays consistent across all your games.</p>"
     }
   },
   {
     "slug": "descubrir-juegos",
     "slugEn": "discover-games",
-    "icon": "🏆",
+    "icon": "🔍",
     "tools": ["irankgames"],
-    "guides": ["mejores-juegos-por-genero"],
+    "guides": ["como-encontrar-juegos-similares"],
     "title": { "es": "Descubrir juegos", "en": "Discover games" },
     "description": {
-      "es": "¿A qué juego juego ahora? Rankings y datos para encontrar el mejor título por género, plataforma y valoración.",
-      "en": "What should I play next? Rankings and data to find the best title by genre, platform and rating."
+      "es": "¿A qué juego juego ahora? Encuentra títulos similares a los que ya te gustan, por mecánicas, ambientación y modo.",
+      "en": "What should I play next? Find titles similar to the ones you already love, by mechanics, setting and mode."
     },
     "body": {
-      "es": "<p>Hay más juegos buenos de los que podrás jugar en la vida, y el problema ya no es la falta de opciones, sino <strong>elegir bien</strong>.</p><p>Aquí te ayudamos a <strong>descubrir tu próximo juego</strong> con rankings basados en datos reales de crítica y jugadores: filtra por género y plataforma, compara valoraciones y encuentra esas joyas que se te pasaron.</p>",
-      "en": "<p>There are more good games than you could play in a lifetime, and the problem is no longer a lack of options — it's <strong>choosing well</strong>.</p><p>Here we help you <strong>discover your next game</strong> with rankings based on real critic and player data: filter by genre and platform, compare ratings and find the gems you missed.</p>"
+      "es": "<p>Hay más juegos buenos de los que podrás jugar en la vida, y el problema ya no es la falta de opciones, sino <strong>encontrar el adecuado para ti</strong>.</p><p>La mejor forma de acertar es partir de un juego que ya te encantó y buscar <strong>otros parecidos de verdad</strong>: no solo del mismo género, sino con mecánicas, ambientación y modo similares. Aquí te ayudamos a descubrir tu próximo juego comparando títulos por sus atributos reales de gameplay.</p>",
+      "en": "<p>There are more good games than you could play in a lifetime, and the problem is no longer a lack of options — it's <strong>finding the right one for you</strong>.</p><p>The best way to get it right is to start from a game you already loved and look for <strong>genuinely similar ones</strong>: not just the same genre, but similar mechanics, setting and mode. Here we help you discover your next game by comparing titles on their real gameplay attributes.</p>"
     }
   }
 ]

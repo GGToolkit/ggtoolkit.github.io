@@ -6,10 +6,10 @@
   "toolsPath": "tools",
   "guidesPath": "guides",
   "meta": {
-    "homeTitle": "GGToolkit — Free tools for gamers",
-    "homeDescription": "A directory of free tools and resources for gamers: pity and damage calculators, redeem codes, databases, rankings, prices and hardware help.",
-    "toolsTitle": "All gaming tools | GGToolkit",
-    "toolsDescription": "GGToolkit's full directory of free tools for gamers, organised by category: calculators, codes, databases, rankings, prices and PC.",
+    "homeTitle": "GGToolkit — Free tools & resources for gamers",
+    "homeDescription": "Pity and damage calculators, a Genshin database, a similar-games finder, mobile game codes, an in-game currency comparator and PC buying guides. Free, no sign-up.",
+    "toolsTitle": "All gaming sites & resources | GGToolkit",
+    "toolsDescription": "GGToolkit's full directory: calculators, databases, a games finder, a currency comparator, codes and PC help. Free and no sign-up.",
     "guidesTitle": "Guides for gamers | GGToolkit",
     "guidesDescription": "Practical guides to get the most out of your games: gacha pity, competitive damage, redeem codes, hardware and more.",
     "aboutTitle": "About GGToolkit",
@@ -18,8 +18,8 @@
     "methodologyDescription": "How we build and verify GGToolkit's tools and guides: sources, validation and updates."
   },
   "home": {
-    "h1": "Free tools for gamers",
-    "intro": "GGToolkit brings together our <strong>free tools and resources</strong> for players in one place: pity and damage calculators, verified redeem codes, databases, rankings, price comparisons and PC help. All fast, no sign-up, and built to help you play better.",
+    "h1": "Free tools & resources for gamers",
+    "intro": "GGToolkit brings together our <strong>free sites and resources</strong> for players in one place: <strong>calculators</strong> for pity and damage, a Genshin <strong>database</strong>, a <strong>similar-games finder</strong>, mobile game <strong>codes</strong>, an in-game <strong>currency comparator</strong> and <strong>PC buying guides</strong>. All fast, no sign-up, and built to help you play better.",
     "featured": "Featured tools",
     "byCategory": "By category",
     "pillars": "Explore by topic",

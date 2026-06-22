@@ -6,10 +6,10 @@
   "toolsPath": "herramientas",
   "guidesPath": "guias",
   "meta": {
-    "homeTitle": "GGToolkit — Herramientas gratis para gamers",
-    "homeDescription": "Directorio de herramientas y recursos gratuitos para gamers: calculadoras de pity y daño, códigos canjeables, bases de datos, rankings, precios y hardware.",
-    "toolsTitle": "Todas las herramientas para gamers | GGToolkit",
-    "toolsDescription": "El directorio completo de herramientas gratuitas para gamers de GGToolkit, organizadas por categoría: calculadoras, códigos, bases de datos, rankings, precios y PC.",
+    "homeTitle": "GGToolkit — Herramientas y recursos gratis para gamers",
+    "homeDescription": "Calculadoras de pity y de daño, base de datos de Genshin, buscador de juegos similares, códigos de juegos móviles, comparador de monedas y guías de compra de PC. Gratis y sin registro.",
+    "toolsTitle": "Todas las webs y recursos para gamers | GGToolkit",
+    "toolsDescription": "El directorio completo de GGToolkit: calculadoras, bases de datos, buscador de juegos, comparador de monedas, códigos y ayuda con tu PC. Gratis y sin registro.",
     "guidesTitle": "Guías para gamers | GGToolkit",
     "guidesDescription": "Guías prácticas para sacarle partido a tus juegos: pity gacha, daño competitivo, códigos canjeables, hardware y más.",
     "aboutTitle": "Sobre GGToolkit",
@@ -18,8 +18,8 @@
     "methodologyDescription": "Cómo creamos y verificamos las herramientas y guías de GGToolkit: fuentes, validación y actualización."
   },
   "home": {
-    "h1": "Herramientas gratis para gamers",
-    "intro": "GGToolkit reúne en un solo sitio nuestras <strong>herramientas y recursos gratuitos</strong> para jugadores: calculadoras de pity y de daño, códigos canjeables verificados, bases de datos, rankings, comparadores de precios y ayuda con tu PC. Todo rápido, sin registro y pensado para ayudarte a jugar mejor.",
+    "h1": "Herramientas y recursos gratis para gamers",
+    "intro": "GGToolkit reúne en un solo sitio nuestras <strong>webs y recursos gratuitos</strong> para jugadores: <strong>calculadoras</strong> de pity y de daño, una <strong>base de datos</strong> de Genshin, un <strong>buscador de juegos similares</strong>, <strong>códigos</strong> de juegos móviles, un <strong>comparador de monedas</strong> y <strong>guías de compra de PC</strong>. Todo rápido, sin registro y pensado para ayudarte a jugar mejor.",
     "featured": "Herramientas destacadas",
     "byCategory": "Por categoría",
     "pillars": "Explora por tema",
