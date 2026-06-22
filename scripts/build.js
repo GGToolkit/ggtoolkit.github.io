@@ -117,16 +117,17 @@ function footer(lang) {
 </footer></body></html>`;
 }
 function catName(lang, key){ return CATS[key] ? CATS[key][lang] : key; }
-function hasShot(slug){ return fs.existsSync(path.join(SRC, 'assets/shots', slug + '.jpg')); }
+function hasLogo(slug){ return fs.existsSync(path.join(SRC, 'assets/logos', slug + '.png')); }
+function logoMark(tool, cls){
+  return hasLogo(tool.slug)
+    ? `<img class="${cls}" src="/assets/logos/${tool.slug}.png" alt="${esc(tool.name)}" loading="lazy" width="256" height="256">`
+    : `<span class="${cls} emoji">${tool.icon}</span>`;
+}
 function toolCard(lang, tool) {
-  const thumb = hasShot(tool.slug)
-    ? `<span class="thumb"><img src="/assets/shots/${tool.slug}.jpg" alt="${esc(tool.name)}" loading="lazy" width="1000" height="760"><span class="thumb-ic">${tool.icon}</span></span>`
-    : `<span class="ic">${tool.icon}</span>`;
   return `<a class="tool-card" href="${pTool(lang, tool.slug)}">
-${thumb}
-<span class="tc-body"><h3>${esc(tool.name)}</h3>
+<span class="tc-head">${logoMark(tool, 'logo-img')}<h3>${esc(tool.name)}</h3></span>
 <p>${esc(tool.tagline[lang])}</p>
-<span class="cat">${CATS[tool.category].icon} ${esc(catName(lang, tool.category))}</span></span></a>`;
+<span class="cat">${CATS[tool.category].icon} ${esc(catName(lang, tool.category))}</span></a>`;
 }
 function guideCard(lang, g) {
   return `<a class="guide-card" href="${pGuide(lang, g)}"><span class="ic">${g.icon}</span> <h3>${esc(g.title[lang])}</h3><p>${esc(g.description[lang])}</p></a>`;
@@ -183,16 +184,14 @@ function toolPageHTML(lang, tool) {
   const uses = `<ul class="ticks">${tool.useCases[lang].map((u)=>`<li>${esc(u)}</li>`).join('')}</ul>`;
   const steps = `<ol class="steps">${tool.howTo[lang].map((s)=>`<li>${esc(s)}</li>`).join('')}</ol>`;
   const faqHtml = (tool.faq||[]).map((f)=>`<dt>${esc(f.q[lang])}</dt><dd>${f.a[lang]}</dd>`).join('');
-  const shot = hasShot(tool.slug)
-    ? `<figure class="shot"><a href="${tool.url}" target="_blank" rel="noopener"><img src="/assets/shots/${tool.slug}.jpg" alt="${esc(tool.name)} — ${esc(tool.tagline[lang])}" width="1000" height="760" loading="lazy"></a></figure>` : '';
-  return head(lang, `${tool.name} — ${tool.tagline[lang]} | GGToolkit`, tool.intro[lang].replace(/<[^>]+>/g,'').slice(0,155), pTool(lang, tool.slug), alts, lds, hasShot(tool.slug) ? `/assets/shots/${tool.slug}.jpg` : null)
+  const toolOg = fs.existsSync(path.join(SRC, 'assets/og', 'tool-' + tool.slug + '.png')) ? `/assets/og/tool-${tool.slug}.png` : null;
+  return head(lang, `${tool.name} — ${tool.tagline[lang]} | GGToolkit`, tool.intro[lang].replace(/<[^>]+>/g,'').slice(0,155), pTool(lang, tool.slug), alts, lds, toolOg)
     + header(lang, 'tools')
     + `<main class="wrap">${crumb(lang,[{name:t.ui.home,path:pHome(lang)},{name:t.ui.tools,path:pTools(lang)},{name:tool.name,path:pTool(lang,tool.slug)}])}
-<div class="tool-hero"><span class="ic">${tool.icon}</span><div>
+<div class="tool-hero"><span class="tool-logo">${logoMark(tool, 'logo-img-lg')}</span><div>
 <h1>${esc(tool.name)}</h1><p class="muted">${esc(tool.tagline[lang])}</p>
 <div class="tags">${tags}</div>
 <div class="btn-row"><a class="btn primary" href="${tool.url}" target="_blank" rel="noopener">${esc(t.ui.openTool)} ↗</a></div></div></div>
-${shot}
 <article class="article">
 <h2>${esc(t.ui.whatIsIt)}</h2><p>${tool.intro[lang]}</p>
 <h2>${esc(t.ui.useCases)}</h2>${uses}
@@ -319,8 +318,8 @@ cp(path.join(SRC, 'assets/js/consent.js'), path.join(DIST, 'assets/js/consent.js
 write(path.join(DIST, 'assets/favicon.svg'), favicon());
 const OGDIR = path.join(SRC, 'assets/og');
 if (fs.existsSync(OGDIR)) fs.readdirSync(OGDIR).forEach((f) => cp(path.join(OGDIR, f), path.join(DIST, 'assets/og', f)));
-const SHOTDIR = path.join(SRC, 'assets/shots');
-if (fs.existsSync(SHOTDIR)) fs.readdirSync(SHOTDIR).forEach((f) => cp(path.join(SHOTDIR, f), path.join(DIST, 'assets/shots', f)));
+const LOGODIR = path.join(SRC, 'assets/logos');
+if (fs.existsSync(LOGODIR)) fs.readdirSync(LOGODIR).forEach((f) => cp(path.join(LOGODIR, f), path.join(DIST, 'assets/logos', f)));
 write(path.join(DIST, 'sitemap.xml'), sitemap());
 write(path.join(DIST, 'robots.txt'), robots());
 write(path.join(DIST, 'manifest.webmanifest'), manifest());
