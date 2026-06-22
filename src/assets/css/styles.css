@@ -45,12 +45,20 @@ p{margin:0 0 1em}
 .grid{display:grid;grid-template-columns:1fr;gap:14px}
 @media(min-width:560px){.grid{grid-template-columns:1fr 1fr}}
 @media(min-width:880px){.grid{grid-template-columns:1fr 1fr 1fr}}
-.tool-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;transition:transform .12s,border-color .12s}
+.tool-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .12s,border-color .12s}
 .tool-card:hover{transform:translateY(-3px);border-color:var(--brand);text-decoration:none}
-.tool-card .ic{font-size:1.8rem;margin-bottom:6px}
+.tool-card .ic{font-size:1.8rem;margin:16px 16px 0}
+.tool-card .thumb{position:relative;display:block;aspect-ratio:1000/520;overflow:hidden;background:var(--bg2);border-bottom:1px solid var(--line)}
+.tool-card .thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.tool-card .thumb-ic{position:absolute;left:10px;bottom:10px;font-size:1.4rem;width:38px;height:38px;display:grid;place-items:center;background:rgba(14,16,24,.75);border:1px solid var(--line);border-radius:10px;backdrop-filter:blur(4px)}
+.tool-card .tc-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
 .tool-card h3{margin:0 0 4px;font-size:1.1rem;color:var(--text)}
 .tool-card p{margin:0;color:var(--muted);font-size:.92rem;flex:1}
 .tool-card .cat{margin-top:10px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--brand2)}
+
+/* tool detail screenshot */
+.shot{margin:0 0 18px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.shot img{display:block;width:100%;height:auto}
 
 /* category chips */
 .cats{display:flex;flex-wrap:wrap;gap:8px}

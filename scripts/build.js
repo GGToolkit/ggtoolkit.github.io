@@ -52,10 +52,11 @@ gtag('js',new Date());gtag('config','${esc(cfg.ga4Id)}')</script>`;
 }
 
 // --- head / chrome ---
-function head(lang, title, desc, canonical, alts, lds) {
+function head(lang, title, desc, canonical, alts, lds, ogImage) {
   const hl = Object.keys(alts).map((l) =>
     `<link rel="alternate" hreflang="${T[l].hreflang}" href="${SITE}${alts[l]}">`).join('\n');
   const ldBlock = (lds || []).map((ld) => `<script type="application/ld+json">${JSON.stringify(ld)}</script>`).join('');
+  const og = ogImage || `/assets/og/og-${lang}.png`;
   return `<!doctype html><html lang="${T[lang].hreflang}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(title)}</title>
@@ -67,8 +68,7 @@ ${hl}
 <meta property="og:type" content="website"><meta property="og:site_name" content="GGToolkit">
 <meta property="og:locale" content="${T[lang].locale}">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}">
-<meta property="og:url" content="${SITE}${canonical}"><meta property="og:image" content="${SITE}/assets/og/og-${lang}.png">
-<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:url" content="${SITE}${canonical}"><meta property="og:image" content="${SITE}${og}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0e1018">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
@@ -117,11 +117,16 @@ function footer(lang) {
 </footer></body></html>`;
 }
 function catName(lang, key){ return CATS[key] ? CATS[key][lang] : key; }
+function hasShot(slug){ return fs.existsSync(path.join(SRC, 'assets/shots', slug + '.jpg')); }
 function toolCard(lang, tool) {
+  const thumb = hasShot(tool.slug)
+    ? `<span class="thumb"><img src="/assets/shots/${tool.slug}.jpg" alt="${esc(tool.name)}" loading="lazy" width="1000" height="760"><span class="thumb-ic">${tool.icon}</span></span>`
+    : `<span class="ic">${tool.icon}</span>`;
   return `<a class="tool-card" href="${pTool(lang, tool.slug)}">
-<span class="ic">${tool.icon}</span><h3>${esc(tool.name)}</h3>
+${thumb}
+<span class="tc-body"><h3>${esc(tool.name)}</h3>
 <p>${esc(tool.tagline[lang])}</p>
-<span class="cat">${CATS[tool.category].icon} ${esc(catName(lang, tool.category))}</span></a>`;
+<span class="cat">${CATS[tool.category].icon} ${esc(catName(lang, tool.category))}</span></span></a>`;
 }
 function guideCard(lang, g) {
   return `<a class="guide-card" href="${pGuide(lang, g)}"><span class="ic">${g.icon}</span> <h3>${esc(g.title[lang])}</h3><p>${esc(g.description[lang])}</p></a>`;
@@ -178,13 +183,16 @@ function toolPageHTML(lang, tool) {
   const uses = `<ul class="ticks">${tool.useCases[lang].map((u)=>`<li>${esc(u)}</li>`).join('')}</ul>`;
   const steps = `<ol class="steps">${tool.howTo[lang].map((s)=>`<li>${esc(s)}</li>`).join('')}</ol>`;
   const faqHtml = (tool.faq||[]).map((f)=>`<dt>${esc(f.q[lang])}</dt><dd>${f.a[lang]}</dd>`).join('');
-  return head(lang, `${tool.name} — ${tool.tagline[lang]} | GGToolkit`, tool.intro[lang].replace(/<[^>]+>/g,'').slice(0,155), pTool(lang, tool.slug), alts, lds)
+  const shot = hasShot(tool.slug)
+    ? `<figure class="shot"><a href="${tool.url}" target="_blank" rel="noopener"><img src="/assets/shots/${tool.slug}.jpg" alt="${esc(tool.name)} — ${esc(tool.tagline[lang])}" width="1000" height="760" loading="lazy"></a></figure>` : '';
+  return head(lang, `${tool.name} — ${tool.tagline[lang]} | GGToolkit`, tool.intro[lang].replace(/<[^>]+>/g,'').slice(0,155), pTool(lang, tool.slug), alts, lds, hasShot(tool.slug) ? `/assets/shots/${tool.slug}.jpg` : null)
     + header(lang, 'tools')
     + `<main class="wrap">${crumb(lang,[{name:t.ui.home,path:pHome(lang)},{name:t.ui.tools,path:pTools(lang)},{name:tool.name,path:pTool(lang,tool.slug)}])}
 <div class="tool-hero"><span class="ic">${tool.icon}</span><div>
 <h1>${esc(tool.name)}</h1><p class="muted">${esc(tool.tagline[lang])}</p>
 <div class="tags">${tags}</div>
 <div class="btn-row"><a class="btn primary" href="${tool.url}" target="_blank" rel="noopener">${esc(t.ui.openTool)} ↗</a></div></div></div>
+${shot}
 <article class="article">
 <h2>${esc(t.ui.whatIsIt)}</h2><p>${tool.intro[lang]}</p>
 <h2>${esc(t.ui.useCases)}</h2>${uses}
@@ -311,6 +319,8 @@ cp(path.join(SRC, 'assets/js/consent.js'), path.join(DIST, 'assets/js/consent.js
 write(path.join(DIST, 'assets/favicon.svg'), favicon());
 const OGDIR = path.join(SRC, 'assets/og');
 if (fs.existsSync(OGDIR)) fs.readdirSync(OGDIR).forEach((f) => cp(path.join(OGDIR, f), path.join(DIST, 'assets/og', f)));
+const SHOTDIR = path.join(SRC, 'assets/shots');
+if (fs.existsSync(SHOTDIR)) fs.readdirSync(SHOTDIR).forEach((f) => cp(path.join(SHOTDIR, f), path.join(DIST, 'assets/shots', f)));
 write(path.join(DIST, 'sitemap.xml'), sitemap());
 write(path.join(DIST, 'robots.txt'), robots());
 write(path.join(DIST, 'manifest.webmanifest'), manifest());
