@@ -63,6 +63,14 @@
       "category": "calculators",
       "icon": "🎯",
       "games": ["Valorant", "CS2", "Apex", "FPS"],
+      "sections": [
+        { "label": { "es": "Calculadora de sensibilidad", "en": "Sensitivity calculator" }, "url": "https://aimhub.gg/calculadora-sensibilidad" },
+        { "label": { "es": "Calculadora de eDPI", "en": "eDPI calculator" }, "url": "https://aimhub.gg/calculadora-edpi" },
+        { "label": { "es": "Test de CPS", "en": "CPS test" }, "url": "https://aimhub.gg/prueba-cps" },
+        { "label": { "es": "Test de reacción", "en": "Reaction test" }, "url": "https://aimhub.gg/test-reaccion" },
+        { "label": { "es": "Test de ratón", "en": "Mouse test" }, "url": "https://aimhub.gg/test-raton" },
+        { "label": { "es": "Test de teclado", "en": "Keyboard test" }, "url": "https://aimhub.gg/test-teclado" }
+      ],
       "tagline": { "es": "Calculadoras de sensibilidad/eDPI y tests de aim", "en": "Sensitivity/eDPI calculators and aim tests" },
       "intro": {
         "es": "Herramientas gaming gratis para mejorar tu <strong>rendimiento</strong>: calculadora de <strong>sensibilidad y eDPI</strong>, conversor de sensibilidad entre juegos, y tests de <strong>CPS, ratón, teclado y reacción</strong>. Sin registro.",
@@ -87,6 +95,16 @@
       "category": "database",
       "icon": "📖",
       "games": ["Genshin Impact"],
+      "sections": [
+        { "label": { "es": "Personajes", "en": "Characters" }, "url": "https://www.genshincodex.com/personajes" },
+        { "label": { "es": "Armas", "en": "Weapons" }, "url": "https://www.genshincodex.com/armas" },
+        { "label": { "es": "Artefactos", "en": "Artifacts" }, "url": "https://www.genshincodex.com/artefactos" },
+        { "label": { "es": "Tier list", "en": "Tier list" }, "url": "https://www.genshincodex.com/tier-list" },
+        { "label": { "es": "Equipos", "en": "Teams" }, "url": "https://www.genshincodex.com/equipos" },
+        { "label": { "es": "Calculadoras", "en": "Calculators" }, "url": "https://www.genshincodex.com/calculadoras" },
+        { "label": { "es": "Banners", "en": "Banners" }, "url": "https://www.genshincodex.com/banners" },
+        { "label": { "es": "Comparador", "en": "Comparator" }, "url": "https://www.genshincodex.com/comparador" }
+      ],
       "tagline": { "es": "Base de datos, builds y calculadoras de Genshin (en español)", "en": "Genshin database, builds & calculators" },
       "intro": {
         "es": "<strong>Base de datos completa de Genshin Impact en español</strong>: builds de personajes, armas y artefactos, guías, y <strong>calculadoras</strong> de pity, resina y protogemas. Todo para optimizar tu equipo, rápido y sin ruido.",
@@ -111,6 +129,10 @@
       "category": "discover",
       "icon": "🔍",
       "games": ["6.700+ juegos", "Multiplataforma"],
+      "sections": [
+        { "label": { "es": "Buscar juegos similares", "en": "Find similar games" }, "url": "https://irankgames.com/es" },
+        { "label": { "es": "Mejores juegos (listas)", "en": "Best games (lists)" }, "url": "https://irankgames.com/es/mejores" }
+      ],
       "tagline": { "es": "Encuentra juegos similares a los que ya te gustan", "en": "Find games similar to the ones you love" },
       "intro": {
         "es": "Un <strong>buscador de juegos similares</strong>: descubre títulos parecidos a los que ya amas usando más de <strong>70 atributos reales de gameplay</strong> (género, mecánicas, ambientación y modo). Compara más de 6.700 juegos, gratis y sin registro.",
@@ -135,6 +157,12 @@
       "category": "prices",
       "icon": "💎",
       "games": ["Roblox", "Fortnite", "+79 juegos"],
+      "sections": [
+        { "label": { "es": "Roblox", "en": "Roblox" }, "url": "https://recursosgamer.com/roblox" },
+        { "label": { "es": "Fortnite", "en": "Fortnite" }, "url": "https://recursosgamer.com/fortnite" },
+        { "label": { "es": "Valorant", "en": "Valorant" }, "url": "https://recursosgamer.com/valorant" },
+        { "label": { "es": "Genshin Impact", "en": "Genshin Impact" }, "url": "https://recursosgamer.com/genshin-impact" }
+      ],
       "tagline": { "es": "¿Funcionan los generadores? Y compara precios de monedas en 79+ juegos", "en": "Do generators work? Plus currency price comparison across 79+ games" },
       "intro": {
         "es": "Te dice la verdad sobre los <strong>generadores gratis</strong> de Robux, V-Bucks, gemas… (¿funcionan o son estafa?) y un <strong>comparador de precios</strong> para comprar monedas más baratas y seguras en más de 79 juegos, con foco en España.",
@@ -159,6 +187,13 @@
       "category": "hardware",
       "icon": "🖥️",
       "games": ["Gaming", "Edición", "Programación"],
+      "sections": [
+        { "label": { "es": "PC para gaming", "en": "Gaming PC" }, "url": "https://www.configurapc.com/gaming" },
+        { "label": { "es": "Edición de vídeo", "en": "Video editing" }, "url": "https://www.configurapc.com/edicion-video" },
+        { "label": { "es": "Programación", "en": "Programming" }, "url": "https://www.configurapc.com/programacion" },
+        { "label": { "es": "Uso diario", "en": "Daily use" }, "url": "https://www.configurapc.com/uso-diario" },
+        { "label": { "es": "Comparar", "en": "Compare" }, "url": "https://www.configurapc.com/comparar" }
+      ],
       "tagline": { "es": "Qué ordenador comprar según tu uso, sin afiliados", "en": "Which computer to buy for your use — no affiliates" },
       "intro": {
         "es": "Te ayuda a decidir <strong>qué ordenador comprar</strong> según tu uso —gaming, edición de vídeo, programación o uso diario— con <strong>análisis honestos, sin publicidad ni afiliados</strong>. Recomendaciones claras, sin jerga innecesaria.",

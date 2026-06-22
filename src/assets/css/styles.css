@@ -59,6 +59,12 @@ p{margin:0 0 1em}
 .logo-img-lg{width:74px;height:74px;border-radius:18px;background:var(--bg2);border:1px solid var(--line);object-fit:contain;padding:8px}
 .logo-img-lg.emoji{display:grid;place-items:center;font-size:2.4rem;padding:0}
 
+/* featured sections (deep links into each web) */
+.sections{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}
+.sec-chip{display:inline-flex;align-items:center;gap:6px;background:var(--card2);border:1px solid var(--line);color:var(--text);padding:7px 13px;border-radius:999px;font-size:.9rem;font-weight:600}
+.sec-chip:hover{border-color:var(--brand2);text-decoration:none}
+.sec-chip span{color:var(--brand2);font-size:.85em}
+
 /* category chips */
 .cats{display:flex;flex-wrap:wrap;gap:8px}
 .cats a{background:var(--card2);border:1px solid var(--line);color:var(--text);padding:7px 13px;border-radius:999px;font-size:.88rem;font-weight:600}

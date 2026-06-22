@@ -196,6 +196,7 @@ function toolPageHTML(lang, tool) {
 <h2>${esc(t.ui.whatIsIt)}</h2><p>${tool.intro[lang]}</p>
 <h2>${esc(t.ui.useCases)}</h2>${uses}
 <h2>${esc(t.ui.howToUse)}</h2>${steps}
+${(tool.sections&&tool.sections.length)?`<h2>${esc(t.ui.sectionsTitle)}</h2><div class="sections">${tool.sections.map((s)=>`<a class="sec-chip" href="${s.url}" target="_blank" rel="noopener">${esc(s.label[lang])} <span>↗</span></a>`).join('')}</div>`:''}
 ${(tool.faq&&tool.faq.length)?`<h2>${esc(t.ui.faq)}</h2><dl class="faq">${faqHtml}</dl>`:''}
 <p style="margin-top:18px"><a class="btn primary" href="${tool.url}" target="_blank" rel="noopener">${esc(t.ui.openTool)}: ${esc(tool.name)} ↗</a></p>
 </article>
