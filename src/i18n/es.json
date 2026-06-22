@@ -1,0 +1,51 @@
+{
+  "lang": "es",
+  "locale": "es_ES",
+  "hreflang": "es",
+  "name": "Español",
+  "toolsPath": "herramientas",
+  "guidesPath": "guias",
+  "meta": {
+    "homeTitle": "GGToolkit — Herramientas gratis para gamers",
+    "homeDescription": "Directorio de herramientas y recursos gratuitos para gamers: calculadoras de pity y daño, códigos canjeables, bases de datos, rankings y comparadores de precios.",
+    "toolsTitle": "Todas las herramientas para gamers | GGToolkit",
+    "toolsDescription": "El directorio completo de herramientas gratuitas para gamers de GGToolkit, organizadas por categoría: calculadoras, códigos, bases de datos, rankings y precios.",
+    "guidesTitle": "Guías para gamers | GGToolkit",
+    "guidesDescription": "Guías prácticas para sacarle partido a tus juegos: pity gacha, calculadoras, códigos canjeables y más.",
+    "aboutTitle": "Sobre GGToolkit",
+    "aboutDescription": "Qué es GGToolkit: un ecosistema de herramientas gratuitas creadas para la comunidad gamer."
+  },
+  "home": {
+    "h1": "Herramientas gratis para gamers",
+    "intro": "GGToolkit reúne en un solo sitio nuestras <strong>herramientas y recursos gratuitos</strong> para jugadores: calculadoras de pity y de daño, códigos canjeables verificados, bases de datos, rankings y comparadores de precios. Todo rápido, sin registro y pensado para ayudarte a jugar mejor.",
+    "featured": "Herramientas destacadas",
+    "byCategory": "Por categoría",
+    "latestGuides": "Últimas guías"
+  },
+  "ui": {
+    "tools": "Herramientas",
+    "guides": "Guías",
+    "about": "Sobre nosotros",
+    "openTool": "Abrir herramienta",
+    "visit": "Visitar",
+    "category": "Categoría",
+    "games": "Juegos",
+    "allTools": "Ver todas las herramientas",
+    "readGuide": "Leer guía",
+    "relatedTools": "Herramientas relacionadas",
+    "backToTools": "← Todas las herramientas",
+    "backHome": "← Inicio",
+    "exploreCategory": "Explorar"
+  },
+  "about": {
+    "h1": "Sobre GGToolkit",
+    "body": "<p><strong>GGToolkit</strong> es un ecosistema de herramientas y recursos gratuitos para la comunidad gamer. Creamos calculadoras, bases de datos y comparadores que resuelven dudas concretas de los jugadores: cuánto te falta para el pity, cuánto daño hace tu Pokémon, qué códigos siguen activos o dónde conseguir recursos sin caer en estafas.</p><p>Todas nuestras herramientas son <strong>gratuitas, sin registro y multiidioma</strong>. Este hub las reúne para que las encuentres fácil y descubras las que aún no conoces.</p><p>¿Sugerencias o errores? Escríbenos:</p>"
+  },
+  "footer": {
+    "tagline": "Herramientas gratis para gamers.",
+    "toolsTitle": "Herramientas",
+    "siteTitle": "GGToolkit",
+    "disclaimer": "GGToolkit es un proyecto independiente creado por fans. Las marcas de juegos pertenecen a sus respectivos propietarios.",
+    "langLabel": "Idioma"
+  }
+}

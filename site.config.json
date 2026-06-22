@@ -1,0 +1,11 @@
+{
+  "url": "https://ggtoolkit.github.io",
+  "siteName": "GGToolkit",
+  "tagline": { "es": "Herramientas gratis para gamers", "en": "Free tools for gamers" },
+  "defaultLang": "es",
+  "languages": ["es", "en"],
+  "contactEmail": "lluismayans83@gmail.com",
+  "lastUpdated": "2026-06-22",
+  "gscVerification": "",
+  "ga4Id": ""
+}

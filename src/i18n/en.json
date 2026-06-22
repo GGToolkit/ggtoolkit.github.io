@@ -1,0 +1,51 @@
+{
+  "lang": "en",
+  "locale": "en_US",
+  "hreflang": "en",
+  "name": "English",
+  "toolsPath": "tools",
+  "guidesPath": "guides",
+  "meta": {
+    "homeTitle": "GGToolkit — Free tools for gamers",
+    "homeDescription": "A directory of free tools and resources for gamers: pity and damage calculators, redeem codes, databases, rankings and price comparisons.",
+    "toolsTitle": "All gaming tools | GGToolkit",
+    "toolsDescription": "GGToolkit's full directory of free tools for gamers, organised by category: calculators, codes, databases, rankings and prices.",
+    "guidesTitle": "Guides for gamers | GGToolkit",
+    "guidesDescription": "Practical guides to get the most out of your games: gacha pity, calculators, redeem codes and more.",
+    "aboutTitle": "About GGToolkit",
+    "aboutDescription": "What GGToolkit is: an ecosystem of free tools built for the gaming community."
+  },
+  "home": {
+    "h1": "Free tools for gamers",
+    "intro": "GGToolkit brings together our <strong>free tools and resources</strong> for players in one place: pity and damage calculators, verified redeem codes, databases, rankings and price comparisons. All fast, no sign-up, and built to help you play better.",
+    "featured": "Featured tools",
+    "byCategory": "By category",
+    "latestGuides": "Latest guides"
+  },
+  "ui": {
+    "tools": "Tools",
+    "guides": "Guides",
+    "about": "About",
+    "openTool": "Open tool",
+    "visit": "Visit",
+    "category": "Category",
+    "games": "Games",
+    "allTools": "See all tools",
+    "readGuide": "Read guide",
+    "relatedTools": "Related tools",
+    "backToTools": "← All tools",
+    "backHome": "← Home",
+    "exploreCategory": "Explore"
+  },
+  "about": {
+    "h1": "About GGToolkit",
+    "body": "<p><strong>GGToolkit</strong> is an ecosystem of free tools and resources for the gaming community. We build calculators, databases and comparators that answer concrete player questions: how far you are from pity, how much damage your Pokémon deals, which codes are still active, or where to get resources without falling for scams.</p><p>All our tools are <strong>free, no sign-up and multilingual</strong>. This hub gathers them so you can find them easily and discover the ones you don't know yet.</p><p>Suggestions or bugs? Get in touch:</p>"
+  },
+  "footer": {
+    "tagline": "Free tools for gamers.",
+    "toolsTitle": "Tools",
+    "siteTitle": "GGToolkit",
+    "disclaimer": "GGToolkit is an independent project made by fans. Game trademarks belong to their respective owners.",
+    "langLabel": "Language"
+  }
+}

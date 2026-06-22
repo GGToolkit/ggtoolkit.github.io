@@ -1,0 +1,107 @@
+{
+  "categories": {
+    "calculators": { "es": "Calculadoras", "en": "Calculators", "icon": "🧮" },
+    "codes": { "es": "Códigos de juego", "en": "Game codes", "icon": "🎟️" },
+    "database": { "es": "Bases de datos", "en": "Databases", "icon": "📚" },
+    "rankings": { "es": "Rankings", "en": "Rankings", "icon": "📊" },
+    "prices": { "es": "Precios y recursos", "en": "Prices & resources", "icon": "💰" }
+  },
+  "tools": [
+    {
+      "slug": "pity-calculator",
+      "name": "PityCalculator",
+      "url": "https://pitycalculator.com",
+      "category": "calculators",
+      "icon": "🎰",
+      "games": ["Genshin Impact", "Honkai: Star Rail", "Zenless Zone Zero", "+60 gacha"],
+      "tagline": {
+        "es": "Calcula tu pity en más de 60 juegos gacha",
+        "en": "Calculate your pity in 60+ gacha games"
+      },
+      "description": {
+        "es": "Calculadoras de <strong>pity</strong> y probabilidad de tirada para más de 60 juegos gacha (Genshin, Honkai: Star Rail, ZZZ y muchos más), en 13 idiomas. Introduce tus tiradas y descubre cuánto te falta para el pity garantizado y tu probabilidad de conseguir al personaje.",
+        "en": "<strong>Pity</strong> and pull-probability calculators for 60+ gacha games (Genshin, Honkai: Star Rail, ZZZ and many more), in 13 languages. Enter your pulls and see how far you are from guaranteed pity and your odds of getting the character."
+      }
+    },
+    {
+      "slug": "champions-damage",
+      "name": "ChampionsDamage",
+      "url": "https://championsdamage.github.io",
+      "category": "calculators",
+      "icon": "⚔️",
+      "games": ["Pokémon Champions"],
+      "tagline": {
+        "es": "Calculadora de daño de Pokémon Champions",
+        "en": "Pokémon Champions damage calculator"
+      },
+      "description": {
+        "es": "Calculadora de <strong>daño</strong> para Pokémon Champions (nivel 50, sistema SP, dobles VGC). Rango de daño exacto y probabilidad de KO, validada contra Pokémon Showdown, en 4 idiomas. Incluye tabla de tipos, speed tiers y naturalezas.",
+        "en": "<strong>Damage</strong> calculator for Pokémon Champions (level 50, SP system, VGC doubles). Exact damage ranges and KO odds, validated against Pokémon Showdown, in 4 languages. Includes type chart, speed tiers and natures."
+      }
+    },
+    {
+      "slug": "redeem-codes",
+      "name": "RedeemCodesToday",
+      "url": "https://redeemcodestoday.com",
+      "category": "codes",
+      "icon": "🎟️",
+      "games": ["Genshin Impact", "Honkai", "Free Fire", "+ muchos"],
+      "tagline": {
+        "es": "Códigos canjeables actualizados que sí funcionan",
+        "en": "Working redeem codes, updated daily"
+      },
+      "description": {
+        "es": "<strong>Códigos canjeables</strong> de tus juegos favoritos, verificados y actualizados a diario. Monitorizamos las fuentes oficiales y probamos los códigos en el juego para que solo veas los que funcionan, con instrucciones de canjeo.",
+        "en": "<strong>Redeem codes</strong> for your favourite games, verified and updated daily. We monitor official sources and test codes in-game so you only see the ones that work, with redemption instructions."
+      }
+    },
+    {
+      "slug": "genshin-codex",
+      "name": "Genshin Codex",
+      "url": "https://www.genshincodex.com",
+      "category": "database",
+      "icon": "📖",
+      "games": ["Genshin Impact"],
+      "tagline": {
+        "es": "Base de datos y guías de Genshin Impact",
+        "en": "Genshin Impact database & guides"
+      },
+      "description": {
+        "es": "Tu <strong>base de datos de Genshin Impact</strong>: personajes, armas, builds, materiales de ascensión y guías. Toda la información que necesitas para optimizar tu equipo, en un solo sitio rápido y limpio.",
+        "en": "Your <strong>Genshin Impact database</strong>: characters, weapons, builds, ascension materials and guides. Everything you need to optimise your team, in one fast and clean place."
+      }
+    },
+    {
+      "slug": "irankgames",
+      "name": "iRankGames",
+      "url": "https://irankgames.com",
+      "category": "rankings",
+      "icon": "🏆",
+      "games": ["Multiplataforma"],
+      "tagline": {
+        "es": "Rankings de los mejores juegos por género y plataforma",
+        "en": "Rankings of the best games by genre & platform"
+      },
+      "description": {
+        "es": "<strong>Rankings de juegos</strong> actualizados: descubre los mejores títulos por género, plataforma y valoración, con datos reales de jugadores y crítica. Ideal para decidir a qué jugar a continuación.",
+        "en": "Up-to-date <strong>game rankings</strong>: discover the best titles by genre, platform and rating, with real player and critic data. Perfect for deciding what to play next."
+      }
+    },
+    {
+      "slug": "recursos-gamer",
+      "name": "RecursosGamer",
+      "url": "https://recursosgamer.com",
+      "category": "prices",
+      "icon": "💎",
+      "games": ["Roblox", "Fortnite", "+79 juegos"],
+      "tagline": {
+        "es": "Compara precios de monedas y recursos en 79+ juegos",
+        "en": "Compare in-game currency prices across 79+ games"
+      },
+      "description": {
+        "es": "Compara dónde conseguir <strong>monedas y recursos</strong> (Robux, V-Bucks, gemas…) más baratos y de forma segura en más de 79 juegos. Te explicamos qué métodos funcionan de verdad y cuáles son estafa.",
+        "en": "Compare where to get <strong>in-game currency and resources</strong> (Robux, V-Bucks, gems…) cheaper and safely across 79+ games. We explain which methods actually work and which are scams."
+      }
+    }
+  ]
+}

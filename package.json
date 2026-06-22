@@ -1,0 +1,15 @@
+{
+  "name": "ggtoolkit",
+  "private": true,
+  "version": "0.1.0",
+  "description": "GGToolkit — free gaming tools hub (ES/EN), static, SEO.",
+  "license": "MIT",
+  "scripts": {
+    "build:og": "node scripts/build-og.js",
+    "build": "node scripts/build-og.js && node scripts/build.js",
+    "serve": "node scripts/serve.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.2"
+  }
+}

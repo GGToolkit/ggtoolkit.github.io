@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "mejores-calculadoras-gamers",
+    "slugEn": "best-gaming-calculators",
+    "date": "2026-06-22",
+    "icon": "🧮",
+    "title": {
+      "es": "Las mejores calculadoras gratis para gamers (2026)",
+      "en": "The best free calculators for gamers (2026)"
+    },
+    "description": {
+      "es": "Una selección de calculadoras gratuitas que todo jugador debería conocer: pity gacha, daño en Pokémon competitivo y más.",
+      "en": "A roundup of free calculators every player should know: gacha pity, competitive Pokémon damage and more."
+    },
+    "body": {
+      "es": "<p>Las calculadoras son el arma secreta del jugador competitivo y del coleccionista de gacha por igual. Te ahorran horas de prueba y error y te dicen, con números, si ese tiro merece la pena. Estas son las que más usamos.</p><h2>Calculadora de pity para juegos gacha</h2><p>Si juegas a Genshin Impact, Honkai: Star Rail o cualquier gacha, saber cuánto te falta para el <strong>pity garantizado</strong> es clave antes de gastar tus tiradas. La <a href=\"https://pitycalculator.com\">calculadora de pity de PityCalculator</a> cubre más de 60 juegos en 13 idiomas: introduces tus tiradas y te dice la probabilidad real de conseguir al personaje.</p><h2>Calculadora de daño para Pokémon competitivo</h2><p>En el VGC, un cálculo decide el combate. <a href=\"https://championsdamage.github.io\">ChampionsDamage</a> calcula el daño exacto en Pokémon Champions (nivel 50, sistema SP, dobles), con rango de daño y probabilidad de KO validados contra Pokémon Showdown.</p><p>¿Te falta alguna? Échale un ojo a nuestro <a href=\"/es/herramientas/\">directorio de herramientas</a> completo.</p>",
+      "en": "<p>Calculators are the secret weapon of competitive players and gacha collectors alike. They save you hours of trial and error and tell you, with numbers, whether that pull is worth it. These are the ones we use most.</p><h2>Pity calculator for gacha games</h2><p>If you play Genshin Impact, Honkai: Star Rail or any gacha, knowing how far you are from <strong>guaranteed pity</strong> is key before spending your pulls. <a href=\"https://pitycalculator.com\">PityCalculator's pity calculator</a> covers 60+ games in 13 languages: enter your pulls and it tells you your real odds of getting the character.</p><h2>Damage calculator for competitive Pokémon</h2><p>In VGC, one calc decides the match. <a href=\"https://championsdamage.github.io\">ChampionsDamage</a> computes exact damage in Pokémon Champions (level 50, SP system, doubles), with damage ranges and KO odds validated against Pokémon Showdown.</p><p>Missing one? Check our full <a href=\"/en/tools/\">tools directory</a>.</p>"
+    }
+  },
+  {
+    "slug": "como-funciona-pity-gacha",
+    "slugEn": "how-gacha-pity-works",
+    "date": "2026-06-22",
+    "icon": "🎰",
+    "title": {
+      "es": "Cómo funciona el pity en los juegos gacha",
+      "en": "How pity works in gacha games"
+    },
+    "description": {
+      "es": "Qué es el pity, el soft pity y el sistema 50/50, y cómo calcular cuántas tiradas necesitas para tu personaje.",
+      "en": "What pity, soft pity and the 50/50 system are, and how to work out how many pulls you need for your character."
+    },
+    "body": {
+      "es": "<p>El <strong>pity</strong> es el sistema que garantiza que, tras un número de tiradas sin suerte, recibas sí o sí un objeto de máxima rareza. Entenderlo evita que tires tu primogema (o tu dinero) a lo loco.</p><h2>Soft pity y hard pity</h2><p>En la mayoría de gachas tipo Genshin, la probabilidad sube de golpe cerca de la tirada 74 (<strong>soft pity</strong>) y el <strong>hard pity</strong> garantiza el 5★ en la 90. Pero el reparto exacto cambia por juego.</p><h2>El 50/50</h2><p>Conseguir un 5★ no siempre te da al personaje destacado: existe el famoso <strong>50/50</strong>. Si lo pierdes, el siguiente está garantizado.</p><h2>Calcula tu caso concreto</h2><p>En vez de hacer cuentas a mano, usa la <a href=\"https://pitycalculator.com\">calculadora de pity</a>: metes tus tiradas actuales y te da la probabilidad exacta para tu juego. Y si juegas a Genshin, en <a href=\"https://www.genshincodex.com\">Genshin Codex</a> tienes las builds y materiales del personaje que persigues.</p>",
+      "en": "<p><strong>Pity</strong> is the system that guarantees you'll receive a top-rarity item after a number of unlucky pulls. Understanding it stops you from throwing away your primogems (or money) blindly.</p><h2>Soft pity and hard pity</h2><p>In most Genshin-style gachas, the rate jumps sharply around pull 74 (<strong>soft pity</strong>), and <strong>hard pity</strong> guarantees the 5★ at 90. But the exact curve varies per game.</p><h2>The 50/50</h2><p>Getting a 5★ doesn't always give you the featured character: that's the famous <strong>50/50</strong>. If you lose it, the next one is guaranteed.</p><h2>Work out your exact case</h2><p>Instead of doing the maths by hand, use the <a href=\"https://pitycalculator.com\">pity calculator</a>: enter your current pulls and it gives the exact probability for your game. And if you play Genshin, <a href=\"https://www.genshincodex.com\">Genshin Codex</a> has the builds and materials for the character you're chasing.</p>"
+    }
+  },
+  {
+    "slug": "donde-canjear-codigos-juego",
+    "slugEn": "where-to-redeem-game-codes",
+    "date": "2026-06-22",
+    "icon": "🎟️",
+    "title": {
+      "es": "Dónde canjear códigos de juego (y cuáles funcionan)",
+      "en": "Where to redeem game codes (and which ones work)"
+    },
+    "description": {
+      "es": "Cómo encontrar códigos canjeables vigentes para tus juegos y canjearlos paso a paso sin caer en estafas.",
+      "en": "How to find valid redeem codes for your games and redeem them step by step without falling for scams."
+    },
+    "body": {
+      "es": "<p>Casi todos los juegos como servicio reparten <strong>códigos canjeables</strong> con recompensas gratis: gemas, monedas, objetos. El problema es que caducan rápido y la mitad de las listas que encuentras están muertas.</p><h2>Solo códigos que funcionan</h2><p>La clave es usar una fuente que verifique los códigos a diario. En <a href=\"https://redeemcodestoday.com\">RedeemCodesToday</a> se monitorizan las fuentes oficiales y se prueban los códigos en el juego, así solo ves los vigentes, con la fecha y las instrucciones de canjeo.</p><h2>Cuidado con las estafas de recursos</h2><p>Huye de los \"generadores\" de monedas gratis: son estafa. Si quieres conseguir recursos de forma segura y comparar precios reales, mira <a href=\"https://recursosgamer.com\">RecursosGamer</a>.</p>",
+      "en": "<p>Almost every live-service game hands out <strong>redeem codes</strong> with free rewards: gems, currency, items. The problem is they expire fast and half the lists you find are dead.</p><h2>Only codes that work</h2><p>The key is using a source that verifies codes daily. <a href=\"https://redeemcodestoday.com\">RedeemCodesToday</a> monitors official sources and tests codes in-game, so you only see the live ones, with the date and redemption instructions.</p><h2>Beware of resource scams</h2><p>Avoid free-currency \"generators\": they're scams. If you want to get resources safely and compare real prices, check <a href=\"https://recursosgamer.com\">RecursosGamer</a>.</p>"
+    }
+  }
+]
