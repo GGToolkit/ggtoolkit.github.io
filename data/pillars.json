@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "gacha",
+    "slugEn": "gacha",
+    "icon": "🎰",
+    "tools": ["pity-calculator", "genshin-codex", "redeem-codes", "recursos-gamer"],
+    "guides": ["como-funciona-pity-gacha", "donde-canjear-codigos-juego", "conseguir-monedas-sin-estafa"],
+    "title": { "es": "Gacha y juegos móviles", "en": "Gacha & mobile games" },
+    "description": {
+      "es": "Todo para el jugador de gacha: calcular tu pity, canjear códigos vigentes, conseguir recursos sin estafas y optimizar tu equipo.",
+      "en": "Everything for the gacha player: calculate your pity, redeem live codes, get resources without scams and optimise your team."
+    },
+    "body": {
+      "es": "<p>Los juegos <strong>gacha</strong> (Genshin Impact, Honkai: Star Rail, Zenless Zone Zero y compañía) viven de un sistema de tiradas con probabilidades y un <strong>pity</strong> que garantiza recompensa tras la mala suerte. Jugar bien aquí no va de gastar más, sino de <strong>saber cuándo y cuánto</strong>.</p><p>En esta sección reunimos las herramientas y guías que de verdad usa un jugador de gacha: para <strong>calcular tu pity</strong>, conseguir <strong>códigos canjeables</strong> que sigan activos, comprar <strong>moneda al mejor precio</strong> sin caer en estafas, y consultar <strong>builds y materiales</strong>.</p>",
+      "en": "<p><strong>Gacha</strong> games (Genshin Impact, Honkai: Star Rail, Zenless Zone Zero and friends) run on a pull system with probabilities and a <strong>pity</strong> that guarantees a reward after a dry streak. Playing well here isn't about spending more — it's about <strong>knowing when and how much</strong>.</p><p>This section gathers the tools and guides a gacha player actually uses: to <strong>calculate your pity</strong>, get <strong>redeem codes</strong> that are still live, buy <strong>currency at the best price</strong> without scams, and check <strong>builds and materials</strong>.</p>"
+    }
+  },
+  {
+    "slug": "competitivo",
+    "slugEn": "competitive",
+    "icon": "⚔️",
+    "tools": ["champions-damage"],
+    "guides": ["como-se-calcula-dano-pokemon"],
+    "title": { "es": "Competitivo y VGC", "en": "Competitive & VGC" },
+    "description": {
+      "es": "Para el jugador competitivo: cálculo de daño, tipos, naturalezas y todo lo que decide un combate por números.",
+      "en": "For the competitive player: damage calc, types, natures and everything a battle is decided by, in numbers."
+    },
+    "body": {
+      "es": "<p>En el juego <strong>competitivo</strong>, un cálculo decide la partida. Saber si tu ataque deja KO, cuánto aguantas un golpe o quién va primero no se deja al azar: se <strong>calcula</strong>.</p><p>Aquí reunimos las herramientas para el competitivo, empezando por el VGC de Pokémon Champions: <strong>rango de daño exacto</strong>, probabilidad de KO, tabla de tipos, speed tiers y naturalezas. Matemática pura para que ganes por preparación, no por suerte.</p>",
+      "en": "<p>In <strong>competitive</strong> play, one calc decides the match. Knowing whether your move KOs, how much you can take or who moves first isn't left to chance — it's <strong>calculated</strong>.</p><p>Here we gather the tools for competitive play, starting with Pokémon Champions VGC: <strong>exact damage ranges</strong>, KO odds, type chart, speed tiers and natures. Pure maths so you win by preparation, not luck.</p>"
+    }
+  },
+  {
+    "slug": "pc-hardware",
+    "slugEn": "pc-hardware",
+    "icon": "🖥️",
+    "tools": ["configura-pc", "aimhub"],
+    "guides": ["cuanta-vram-fps-necesitas", "guia-dpi-sensibilidad"],
+    "title": { "es": "PC y hardware", "en": "PC & hardware" },
+    "description": {
+      "es": "Saca el máximo a tu equipo: qué PC montar, cuántos FPS dará, y cómo ajustar tu DPI y sensibilidad para apuntar mejor.",
+      "en": "Get the most from your rig: which PC to build, how many FPS it'll push, and how to tune your DPI and sensitivity to aim better."
+    },
+    "body": {
+      "es": "<p>El <strong>hardware</strong> es la mitad invisible del rendimiento. Un PC bien equilibrado y una sensibilidad bien ajustada marcan la diferencia entre frustrarte y disfrutar.</p><p>En esta sección te ayudamos a <strong>elegir qué PC montar</strong> según tu uso y presupuesto, a estimar qué <strong>FPS</strong> conseguirás y a afinar tu <strong>DPI y sensibilidad</strong> para que tu puntería sea consistente en todos tus juegos.</p>",
+      "en": "<p><strong>Hardware</strong> is the invisible half of performance. A well-balanced PC and a well-tuned sensitivity are the difference between frustration and fun.</p><p>This section helps you <strong>choose which PC to build</strong> for your use and budget, estimate the <strong>FPS</strong> you'll get, and fine-tune your <strong>DPI and sensitivity</strong> so your aim stays consistent across all your games.</p>"
+    }
+  },
+  {
+    "slug": "descubrir-juegos",
+    "slugEn": "discover-games",
+    "icon": "🏆",
+    "tools": ["irankgames"],
+    "guides": ["mejores-juegos-por-genero"],
+    "title": { "es": "Descubrir juegos", "en": "Discover games" },
+    "description": {
+      "es": "¿A qué juego juego ahora? Rankings y datos para encontrar el mejor título por género, plataforma y valoración.",
+      "en": "What should I play next? Rankings and data to find the best title by genre, platform and rating."
+    },
+    "body": {
+      "es": "<p>Hay más juegos buenos de los que podrás jugar en la vida, y el problema ya no es la falta de opciones, sino <strong>elegir bien</strong>.</p><p>Aquí te ayudamos a <strong>descubrir tu próximo juego</strong> con rankings basados en datos reales de crítica y jugadores: filtra por género y plataforma, compara valoraciones y encuentra esas joyas que se te pasaron.</p>",
+      "en": "<p>There are more good games than you could play in a lifetime, and the problem is no longer a lack of options — it's <strong>choosing well</strong>.</p><p>Here we help you <strong>discover your next game</strong> with rankings based on real critic and player data: filter by genre and platform, compare ratings and find the gems you missed.</p>"
+    }
+  }
+]

@@ -4,7 +4,8 @@
     "codes": { "es": "Códigos de juego", "en": "Game codes", "icon": "🎟️" },
     "database": { "es": "Bases de datos", "en": "Databases", "icon": "📚" },
     "rankings": { "es": "Rankings", "en": "Rankings", "icon": "📊" },
-    "prices": { "es": "Precios y recursos", "en": "Prices & resources", "icon": "💰" }
+    "prices": { "es": "Precios y recursos", "en": "Prices & resources", "icon": "💰" },
+    "hardware": { "es": "PC y hardware", "en": "PC & hardware", "icon": "🖥️" }
   },
   "tools": [
     {
@@ -13,15 +14,24 @@
       "url": "https://pitycalculator.com",
       "category": "calculators",
       "icon": "🎰",
-      "games": ["Genshin Impact", "Honkai: Star Rail", "Zenless Zone Zero", "+60 gacha"],
-      "tagline": {
-        "es": "Calcula tu pity en más de 60 juegos gacha",
-        "en": "Calculate your pity in 60+ gacha games"
+      "games": ["Genshin Impact", "Honkai: Star Rail", "Zenless Zone Zero", "+62 gacha"],
+      "tagline": { "es": "Calcula tu pity en más de 60 juegos gacha", "en": "Calculate your pity in 60+ gacha games" },
+      "intro": {
+        "es": "Calculadoras de <strong>pity</strong> y probabilidad de tirada para más de 60 juegos gacha, en 13 idiomas. Metes tus tiradas y sabes al instante cuánto te falta para el garantizado y tu probabilidad real de sacar al personaje.",
+        "en": "<strong>Pity</strong> and pull-probability calculators for 60+ gacha games, in 13 languages. Enter your pulls and instantly know how far you are from the guarantee and your real odds of getting the character."
       },
-      "description": {
-        "es": "Calculadoras de <strong>pity</strong> y probabilidad de tirada para más de 60 juegos gacha (Genshin, Honkai: Star Rail, ZZZ y muchos más), en 13 idiomas. Introduce tus tiradas y descubre cuánto te falta para el pity garantizado y tu probabilidad de conseguir al personaje.",
-        "en": "<strong>Pity</strong> and pull-probability calculators for 60+ gacha games (Genshin, Honkai: Star Rail, ZZZ and many more), in 13 languages. Enter your pulls and see how far you are from guaranteed pity and your odds of getting the character."
-      }
+      "useCases": {
+        "es": ["Saber cuántas tiradas te faltan para el hard pity", "Calcular tu probabilidad antes de gastar primogemas", "Planificar un banner sabiendo si llegas al 50/50"],
+        "en": ["Know how many pulls are left until hard pity", "Work out your odds before spending primogems", "Plan a banner knowing if you'll hit the 50/50"]
+      },
+      "howTo": {
+        "es": ["Elige tu juego de la lista (Genshin, HSR, ZZZ…)", "Introduce tus tiradas actuales y si tienes el garantizado", "Lee tu probabilidad y las tiradas que necesitas"],
+        "en": ["Pick your game from the list (Genshin, HSR, ZZZ…)", "Enter your current pulls and whether you have the guarantee", "Read your probability and the pulls you need"]
+      },
+      "faq": [
+        { "q": { "es": "¿Qué es el pity?", "en": "What is pity?" }, "a": { "es": "El sistema que garantiza un objeto de máxima rareza tras un número de tiradas sin suerte. PityCalculator te dice exactamente cuánto te falta en tu juego.", "en": "The system that guarantees a top-rarity item after a number of unlucky pulls. PityCalculator tells you exactly how far you are in your game." } },
+        { "q": { "es": "¿Cubre mi juego?", "en": "Does it cover my game?" }, "a": { "es": "Soporta más de 60 juegos gacha y suma más con cada actualización.", "en": "It supports 60+ gacha games and adds more with every update." } }
+      ]
     },
     {
       "slug": "champions-damage",
@@ -30,14 +40,22 @@
       "category": "calculators",
       "icon": "⚔️",
       "games": ["Pokémon Champions"],
-      "tagline": {
-        "es": "Calculadora de daño de Pokémon Champions",
-        "en": "Pokémon Champions damage calculator"
+      "tagline": { "es": "Calculadora de daño de Pokémon Champions", "en": "Pokémon Champions damage calculator" },
+      "intro": {
+        "es": "Calculadora de <strong>daño</strong> para Pokémon Champions (nivel 50, sistema SP, dobles VGC). Rango de daño exacto y probabilidad de KO, validada contra Pokémon Showdown, en 4 idiomas.",
+        "en": "<strong>Damage</strong> calculator for Pokémon Champions (level 50, SP system, VGC doubles). Exact damage ranges and KO odds, validated against Pokémon Showdown, in 4 languages."
       },
-      "description": {
-        "es": "Calculadora de <strong>daño</strong> para Pokémon Champions (nivel 50, sistema SP, dobles VGC). Rango de daño exacto y probabilidad de KO, validada contra Pokémon Showdown, en 4 idiomas. Incluye tabla de tipos, speed tiers y naturalezas.",
-        "en": "<strong>Damage</strong> calculator for Pokémon Champions (level 50, SP system, VGC doubles). Exact damage ranges and KO odds, validated against Pokémon Showdown, in 4 languages. Includes type chart, speed tiers and natures."
-      }
+      "useCases": {
+        "es": ["Saber si tu ataque deja KO al rival", "Ajustar tu reparto de SP para llegar a un cálculo", "Consultar la tabla de tipos, speed tiers y naturalezas"],
+        "en": ["Know if your move KOs the opponent", "Tune your SP spread to hit a calc", "Check the type chart, speed tiers and natures"]
+      },
+      "howTo": {
+        "es": ["Elige atacante, defensor y movimiento", "Reparte los SP y ajusta naturaleza, objeto y clima", "Lee el rango de daño y la probabilidad de KO"],
+        "en": ["Pick attacker, defender and move", "Distribute SP and set nature, item and weather", "Read the damage range and KO odds"]
+      },
+      "faq": [
+        { "q": { "es": "¿Los números son fiables?", "en": "Are the numbers reliable?" }, "a": { "es": "Sí: la fórmula está validada contra @smogon/calc (el motor de Pokémon Showdown), así que el resultado es idéntico.", "en": "Yes: the formula is validated against @smogon/calc (the Pokémon Showdown engine), so the result is identical." } }
+      ]
     },
     {
       "slug": "redeem-codes",
@@ -46,14 +64,22 @@
       "category": "codes",
       "icon": "🎟️",
       "games": ["Genshin Impact", "Honkai", "Free Fire", "+ muchos"],
-      "tagline": {
-        "es": "Códigos canjeables actualizados que sí funcionan",
-        "en": "Working redeem codes, updated daily"
+      "tagline": { "es": "Códigos canjeables actualizados que sí funcionan", "en": "Working redeem codes, updated daily" },
+      "intro": {
+        "es": "<strong>Códigos canjeables</strong> de tus juegos favoritos, verificados a diario. Monitorizamos las fuentes oficiales y probamos los códigos en el juego, así solo ves los que funcionan, con la fecha y las instrucciones de canjeo.",
+        "en": "<strong>Redeem codes</strong> for your favourite games, verified daily. We monitor official sources and test codes in-game, so you only see the ones that work, with the date and redemption instructions."
       },
-      "description": {
-        "es": "<strong>Códigos canjeables</strong> de tus juegos favoritos, verificados y actualizados a diario. Monitorizamos las fuentes oficiales y probamos los códigos en el juego para que solo veas los que funcionan, con instrucciones de canjeo.",
-        "en": "<strong>Redeem codes</strong> for your favourite games, verified and updated daily. We monitor official sources and test codes in-game so you only see the ones that work, with redemption instructions."
-      }
+      "useCases": {
+        "es": ["Encontrar códigos vigentes sin listas muertas", "Canjear recompensas gratis antes de que caduquen", "Saber qué código sigue activo y cuál no"],
+        "en": ["Find live codes without dead lists", "Redeem free rewards before they expire", "Know which code is still active and which isn't"]
+      },
+      "howTo": {
+        "es": ["Busca tu juego", "Copia el código vigente (con fecha verificada)", "Sigue las instrucciones de canjeo del juego"],
+        "en": ["Find your game", "Copy the live code (with verified date)", "Follow the game's redemption steps"]
+      },
+      "faq": [
+        { "q": { "es": "¿Cada cuánto se actualizan?", "en": "How often are codes updated?" }, "a": { "es": "A diario. Se monitorizan las fuentes oficiales y se prueban los códigos en el juego antes de publicarlos.", "en": "Daily. Official sources are monitored and codes tested in-game before publishing." } }
+      ]
     },
     {
       "slug": "genshin-codex",
@@ -62,14 +88,22 @@
       "category": "database",
       "icon": "📖",
       "games": ["Genshin Impact"],
-      "tagline": {
-        "es": "Base de datos y guías de Genshin Impact",
-        "en": "Genshin Impact database & guides"
+      "tagline": { "es": "Base de datos y guías de Genshin Impact", "en": "Genshin Impact database & guides" },
+      "intro": {
+        "es": "Tu <strong>base de datos de Genshin Impact</strong>: personajes, armas, builds, materiales de ascensión y guías. Toda la información para optimizar tu equipo, rápida y sin ruido, en 5 idiomas.",
+        "en": "Your <strong>Genshin Impact database</strong>: characters, weapons, builds, ascension materials and guides. Everything to optimise your team, fast and clutter-free, in 5 languages."
       },
-      "description": {
-        "es": "Tu <strong>base de datos de Genshin Impact</strong>: personajes, armas, builds, materiales de ascensión y guías. Toda la información que necesitas para optimizar tu equipo, en un solo sitio rápido y limpio.",
-        "en": "Your <strong>Genshin Impact database</strong>: characters, weapons, builds, ascension materials and guides. Everything you need to optimise your team, in one fast and clean place."
-      }
+      "useCases": {
+        "es": ["Consultar la mejor build de un personaje", "Ver qué materiales necesitas para ascender", "Comparar armas y artefactos"],
+        "en": ["Check a character's best build", "See which materials you need to ascend", "Compare weapons and artifacts"]
+      },
+      "howTo": {
+        "es": ["Busca el personaje o arma", "Consulta build, materiales y estadísticas", "Planifica tu farmeo con los datos"],
+        "en": ["Search the character or weapon", "Check build, materials and stats", "Plan your farming with the data"]
+      },
+      "faq": [
+        { "q": { "es": "¿Está actualizado a la versión actual?", "en": "Is it up to date with the current version?" }, "a": { "es": "Sí, la base de datos se mantiene al día con cada actualización del juego.", "en": "Yes, the database is kept up to date with every game update." } }
+      ]
     },
     {
       "slug": "irankgames",
@@ -77,15 +111,23 @@
       "url": "https://irankgames.com",
       "category": "rankings",
       "icon": "🏆",
-      "games": ["Multiplataforma"],
-      "tagline": {
-        "es": "Rankings de los mejores juegos por género y plataforma",
-        "en": "Rankings of the best games by genre & platform"
+      "games": ["~6.700 juegos", "Multiplataforma"],
+      "tagline": { "es": "Rankings de los mejores juegos por género y plataforma", "en": "Rankings of the best games by genre & platform" },
+      "intro": {
+        "es": "<strong>Rankings de juegos</strong> con datos reales de jugadores y crítica: descubre los mejores títulos por género, plataforma y valoración entre más de 6.700 juegos. Ideal para decidir a qué jugar a continuación.",
+        "en": "<strong>Game rankings</strong> with real player and critic data: discover the best titles by genre, platform and rating across 6,700+ games. Perfect for deciding what to play next."
       },
-      "description": {
-        "es": "<strong>Rankings de juegos</strong> actualizados: descubre los mejores títulos por género, plataforma y valoración, con datos reales de jugadores y crítica. Ideal para decidir a qué jugar a continuación.",
-        "en": "Up-to-date <strong>game rankings</strong>: discover the best titles by genre, platform and rating, with real player and critic data. Perfect for deciding what to play next."
-      }
+      "useCases": {
+        "es": ["Encontrar el mejor juego de un género", "Comparar valoraciones de crítica y jugadores", "Descubrir títulos que te has perdido"],
+        "en": ["Find the best game in a genre", "Compare critic and player ratings", "Discover titles you missed"]
+      },
+      "howTo": {
+        "es": ["Filtra por género o plataforma", "Ordena por valoración o popularidad", "Abre la ficha del juego para más detalle"],
+        "en": ["Filter by genre or platform", "Sort by rating or popularity", "Open the game page for more detail"]
+      },
+      "faq": [
+        { "q": { "es": "¿De dónde salen los rankings?", "en": "Where do the rankings come from?" }, "a": { "es": "De datos agregados de crítica y jugadores, actualizados de forma continua.", "en": "From aggregated critic and player data, continuously updated." } }
+      ]
     },
     {
       "slug": "recursos-gamer",
@@ -94,14 +136,70 @@
       "category": "prices",
       "icon": "💎",
       "games": ["Roblox", "Fortnite", "+79 juegos"],
-      "tagline": {
-        "es": "Compara precios de monedas y recursos en 79+ juegos",
-        "en": "Compare in-game currency prices across 79+ games"
+      "tagline": { "es": "Compara precios de monedas y recursos en 79+ juegos", "en": "Compare in-game currency prices across 79+ games" },
+      "intro": {
+        "es": "Compara dónde conseguir <strong>monedas y recursos</strong> (Robux, V-Bucks, gemas…) más baratos y de forma segura en más de 79 juegos. Te decimos qué métodos funcionan de verdad y cuáles son estafa.",
+        "en": "Compare where to get <strong>in-game currency and resources</strong> (Robux, V-Bucks, gems…) cheaper and safely across 79+ games. We tell you which methods actually work and which are scams."
       },
-      "description": {
-        "es": "Compara dónde conseguir <strong>monedas y recursos</strong> (Robux, V-Bucks, gemas…) más baratos y de forma segura en más de 79 juegos. Te explicamos qué métodos funcionan de verdad y cuáles son estafa.",
-        "en": "Compare where to get <strong>in-game currency and resources</strong> (Robux, V-Bucks, gems…) cheaper and safely across 79+ games. We explain which methods actually work and which are scams."
-      }
+      "useCases": {
+        "es": ["Comprar moneda al mejor precio por unidad", "Evitar estafas de 'generadores gratis'", "Comparar tiendas oficiales y de terceros"],
+        "en": ["Buy currency at the best price per unit", "Avoid 'free generator' scams", "Compare official and third-party stores"]
+      },
+      "howTo": {
+        "es": ["Elige tu juego", "Consulta la tabla de eficiencia precio/moneda", "Compra en la opción más barata y segura"],
+        "en": ["Pick your game", "Check the price-per-unit efficiency table", "Buy from the cheapest, safest option"]
+      },
+      "faq": [
+        { "q": { "es": "¿Funcionan los generadores de moneda gratis?", "en": "Do free currency generators work?" }, "a": { "es": "No. Son estafa. RecursosGamer te muestra solo métodos legítimos y compara precios reales.", "en": "No. They're scams. RecursosGamer only shows legitimate methods and compares real prices." } }
+      ]
+    },
+    {
+      "slug": "configura-pc",
+      "name": "ConfiguraPC",
+      "url": "https://www.configurapc.com",
+      "category": "hardware",
+      "icon": "🖥️",
+      "games": ["Gaming", "Edición", "Programación"],
+      "tagline": { "es": "Qué PC montar según tu uso y presupuesto", "en": "Which PC to build for your use and budget" },
+      "intro": {
+        "es": "Asesor de <strong>configuraciones de PC</strong>: te recomienda los componentes adecuados según tu uso (gaming, edición de vídeo, programación) y tu presupuesto, sin jerga innecesaria. En 5 idiomas.",
+        "en": "A <strong>PC spec advisor</strong>: it recommends the right components for your use (gaming, video editing, programming) and your budget, without needless jargon. In 5 languages."
+      },
+      "useCases": {
+        "es": ["Saber qué PC necesitas para jugar a un juego", "Montar un equipo equilibrado por presupuesto", "Evitar cuellos de botella entre CPU y GPU"],
+        "en": ["Know which PC you need to play a game", "Build a balanced rig for your budget", "Avoid CPU/GPU bottlenecks"]
+      },
+      "howTo": {
+        "es": ["Elige tu uso y presupuesto", "Recibe una configuración recomendada", "Ajusta componentes según tus prioridades"],
+        "en": ["Pick your use and budget", "Get a recommended configuration", "Tweak components to your priorities"]
+      },
+      "faq": [
+        { "q": { "es": "¿Para qué usos sirve?", "en": "What uses is it for?" }, "a": { "es": "Gaming, edición de vídeo, programación y uso diario, con recomendaciones adaptadas a cada caso y presupuesto.", "en": "Gaming, video editing, programming and daily use, with recommendations tailored to each case and budget." } }
+      ]
+    },
+    {
+      "slug": "aimhub",
+      "name": "AimHub",
+      "url": "https://aimhub.gg",
+      "category": "hardware",
+      "icon": "🎯",
+      "games": ["FPS", "Valorant", "CS2", "Apex"],
+      "tagline": { "es": "Herramientas de DPI y sensibilidad para apuntar mejor", "en": "DPI & sensitivity tools to aim better" },
+      "intro": {
+        "es": "Herramientas de <strong>puntería</strong> para jugadores de FPS: analizador de DPI real de tu ratón, conversor de sensibilidad entre juegos y más. Encuentra tu sensibilidad ideal y llévala a cualquier juego.",
+        "en": "<strong>Aim</strong> tools for FPS players: real mouse DPI analyzer, sensitivity converter between games and more. Find your ideal sensitivity and carry it to any game."
+      },
+      "useCases": {
+        "es": ["Medir el DPI real de tu ratón", "Convertir tu sensibilidad de un juego a otro", "Igualar tu cm/360 entre títulos"],
+        "en": ["Measure your mouse's real DPI", "Convert your sensitivity from one game to another", "Match your cm/360 across titles"]
+      },
+      "howTo": {
+        "es": ["Elige la herramienta (DPI o conversor)", "Introduce tus datos o haz la prueba", "Aplica el resultado en tu juego"],
+        "en": ["Pick the tool (DPI or converter)", "Enter your data or run the test", "Apply the result in your game"]
+      },
+      "faq": [
+        { "q": { "es": "¿Por qué importa la sensibilidad?", "en": "Why does sensitivity matter?" }, "a": { "es": "Una sensibilidad consistente entre juegos mejora tu memoria muscular y tu puntería. AimHub te ayuda a igualarla.", "en": "A consistent sensitivity across games improves your muscle memory and aim. AimHub helps you match it." } }
+      ]
     }
   ]
 }

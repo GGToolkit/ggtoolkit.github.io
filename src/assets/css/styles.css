@@ -90,3 +90,27 @@ p{margin:0 0 1em}
 .footer-cols a{display:block;color:var(--muted);padding:2px 0}
 .footer-cols a:hover{color:var(--text)}
 .foot-brand{display:flex;align-items:center;gap:9px;font-weight:800;color:var(--text);margin-bottom:6px}
+
+/* pillar cards */
+.pillar-card{display:flex;flex-direction:column;background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--radius);padding:16px;transition:transform .12s,border-color .12s}
+.pillar-card:hover{transform:translateY(-3px);border-color:var(--brand2);text-decoration:none}
+.pillar-card .ic{font-size:1.7rem;margin-bottom:6px}
+.pillar-card h3{margin:0 0 4px;font-size:1.1rem;color:var(--text)}
+.pillar-card p{margin:0;color:var(--muted);font-size:.92rem}
+
+/* rich tool/article elements */
+.ticks{list-style:none;padding:0;margin:0 0 1em}
+.ticks li{position:relative;padding-left:26px;margin-bottom:7px}
+.ticks li::before{content:"✓";position:absolute;left:0;color:var(--brand2);font-weight:900}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0 0 1em}
+.steps li{position:relative;padding-left:38px;margin-bottom:10px}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:-2px;width:26px;height:26px;border-radius:50%;background:var(--card2);border:1px solid var(--line);color:var(--brand2);font-weight:800;display:grid;place-items:center;font-size:.85rem}
+.faq dt{font-weight:700;margin-top:14px}
+.faq dd{margin:4px 0 0;color:var(--muted)}
+.byline{color:var(--muted);font-size:.88rem;margin-top:-.4em;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:18px}
+
+/* consent banner */
+.consent{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:12px;padding:12px 14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.88rem}
+.consent[hidden]{display:none}
+.consent-actions{display:flex;gap:8px}
+@media(min-width:680px){.consent{left:auto;max-width:520px}}
