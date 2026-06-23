@@ -71,7 +71,7 @@ ${hl}
 <meta property="og:url" content="${SITE}${canonical}"><meta property="og:image" content="${SITE}${og}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0e1018">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest">
 <link rel="stylesheet" href="/assets/css/styles.css">
 ${ldBlock}${tracking()}
 </head><body>`;
@@ -209,7 +209,7 @@ function pillarPageHTML(lang, p) {
   const bc = breadcrumbLd(lang,[{name:t.ui.home,path:pHome(lang)},{name:p.title[lang],path:pPillar(lang,p)}]);
   const tools = p.tools.map((s)=>toolBySlug[s]).filter(Boolean);
   const guides = (p.guides||[]).map((gs)=>GUIDES.find((g)=>g.slug===gs)).filter(Boolean);
-  return head(lang, `${p.title[lang]} — herramientas y guías | GGToolkit`, p.description[lang], pPillar(lang,p), alts, [bc])
+  return head(lang, `${p.title[lang]} — ${t.meta.pillarSuffix} | GGToolkit`, p.description[lang], pPillar(lang,p), alts, [bc])
     + header(lang, 'tools')
     + `<main class="wrap">${crumb(lang,[{name:t.ui.home,path:pHome(lang)},{name:p.title[lang],path:pPillar(lang,p)}])}
 <section class="hero" style="padding:18px 0 6px;text-align:left"><h1>${p.icon} ${esc(p.title[lang])}</h1></section>
@@ -272,7 +272,7 @@ function rootHTML() {
 <meta name="description" content="${esc(T[cfg.defaultLang].meta.homeDescription)}">
 <link rel="canonical" href="${SITE}/">
 ${hl}
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png"><link rel="stylesheet" href="/assets/css/styles.css">
 <script>(function(){var m=${JSON.stringify(map)};var L=(navigator.languages||[navigator.language||'']);for(var i=0;i<L.length;i++){var c=(L[i]||'').slice(0,2).toLowerCase();if(m[c]){location.replace(m[c]);return}}location.replace(${JSON.stringify(pHome(cfg.defaultLang))});})();</script>
 </head><body><main class="wrap" style="padding:50px 16px;text-align:center"><h1>GGToolkit</h1><p class="muted">Choose your language · Elige tu idioma</p><p>${links}</p></main></body></html>`;
 }
@@ -296,7 +296,7 @@ function sitemap() {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${U.join('\n')}\n</urlset>\n`;
 }
 const robots = () => `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
-const manifest = () => JSON.stringify({ name:'GGToolkit', short_name:'GGToolkit', start_url:'/', display:'standalone', background_color:'#0e1018', theme_color:'#0e1018', icons:[{src:'/assets/favicon.svg',sizes:'any',type:'image/svg+xml'}] });
+const manifest = () => JSON.stringify({ name:'GGToolkit', short_name:'GGToolkit', start_url:'/', display:'standalone', background_color:'#0e1018', theme_color:'#0e1018', icons:[{src:'/assets/icons/favicon.svg',sizes:'any',type:'image/svg+xml'},{src:'/assets/icons/icon-192.png',sizes:'192x192',type:'image/png',purpose:'any maskable'},{src:'/assets/icons/icon-512.png',sizes:'512x512',type:'image/png',purpose:'any maskable'}] });
 const favicon = () => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#6c5cff"/><text x="32" y="42" font-family="Arial,sans-serif" font-size="30" font-weight="900" fill="#fff" text-anchor="middle">GG</text></svg>`;
 
 // --- build ---
@@ -316,7 +316,11 @@ cfg.languages.forEach((l) => {
 write(path.join(DIST, 'index.html'), rootHTML());
 cp(path.join(SRC, 'assets/css/styles.css'), path.join(DIST, 'assets/css/styles.css'));
 cp(path.join(SRC, 'assets/js/consent.js'), path.join(DIST, 'assets/js/consent.js'));
-write(path.join(DIST, 'assets/favicon.svg'), favicon());
+const ICONDIR = path.join(SRC, 'assets/icons');
+if (fs.existsSync(ICONDIR)) {
+  fs.readdirSync(ICONDIR).forEach((f) => cp(path.join(ICONDIR, f), path.join(DIST, 'assets/icons', f)));
+  cp(path.join(ICONDIR, 'favicon.ico'), path.join(DIST, 'favicon.ico'));
+} else { write(path.join(DIST, 'assets/icons/favicon.svg'), favicon()); }
 const OGDIR = path.join(SRC, 'assets/og');
 if (fs.existsSync(OGDIR)) fs.readdirSync(OGDIR).forEach((f) => cp(path.join(OGDIR, f), path.join(DIST, 'assets/og', f)));
 const LOGODIR = path.join(SRC, 'assets/logos');

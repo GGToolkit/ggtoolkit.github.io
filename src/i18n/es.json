@@ -15,7 +15,8 @@
     "aboutTitle": "Sobre GGToolkit",
     "aboutDescription": "Qué es GGToolkit: un ecosistema de herramientas gratuitas creadas para la comunidad gamer.",
     "methodologyTitle": "Metodología — cómo trabajamos",
-    "methodologyDescription": "Cómo creamos y verificamos las herramientas y guías de GGToolkit: fuentes, validación y actualización."
+    "methodologyDescription": "Cómo creamos y verificamos las herramientas y guías de GGToolkit: fuentes, validación y actualización.",
+    "pillarSuffix": "herramientas y guías"
   },
   "home": {
     "h1": "Herramientas y recursos gratis para gamers",
