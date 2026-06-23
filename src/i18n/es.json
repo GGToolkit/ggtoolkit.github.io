@@ -4,53 +4,36 @@
   "hreflang": "es",
   "name": "Español",
   "toolsPath": "herramientas",
-  "guidesPath": "guias",
   "meta": {
     "homeTitle": "GGToolkit — Herramientas y recursos gratis para gamers",
     "homeDescription": "Calculadoras de pity y de daño, base de datos de Genshin, buscador de juegos similares, códigos de juegos móviles, comparador de monedas y guías de compra de PC. Gratis y sin registro.",
     "toolsTitle": "Todas las webs y recursos para gamers | GGToolkit",
     "toolsDescription": "El directorio completo de GGToolkit: calculadoras, bases de datos, buscador de juegos, comparador de monedas, códigos y ayuda con tu PC. Gratis y sin registro.",
-    "guidesTitle": "Guías para gamers | GGToolkit",
-    "guidesDescription": "Guías prácticas para sacarle partido a tus juegos: pity gacha, daño competitivo, códigos canjeables, hardware y más.",
     "aboutTitle": "Sobre GGToolkit",
     "aboutDescription": "Qué es GGToolkit: un ecosistema de herramientas gratuitas creadas para la comunidad gamer.",
     "methodologyTitle": "Metodología — cómo trabajamos",
     "methodologyDescription": "Cómo creamos y verificamos las herramientas y guías de GGToolkit: fuentes, validación y actualización.",
-    "pillarSuffix": "herramientas y guías"
+    "contactTitle": "Contacto",
+    "contactDescription": "Contacta con GGToolkit: colaboraciones, reportar errores, sugerencias, prensa y publicidad. Te respondemos personalmente."
   },
   "home": {
-    "h1": "Herramientas y recursos gratis para gamers",
-    "intro": "GGToolkit reúne en un solo sitio nuestras <strong>webs y recursos gratuitos</strong> para jugadores: <strong>calculadoras</strong> de pity y de daño, una <strong>base de datos</strong> de Genshin, un <strong>buscador de juegos similares</strong>, <strong>códigos</strong> de juegos móviles, un <strong>comparador de monedas</strong> y <strong>guías de compra de PC</strong>. Todo rápido, sin registro y pensado para ayudarte a jugar mejor.",
-    "featured": "Herramientas destacadas",
-    "byCategory": "Por categoría",
-    "pillars": "Explora por tema",
-    "latestGuides": "Últimas guías"
+    "h1": "GGToolkit: el ecosistema de webs gratis para gamers",
+    "intro": "<strong>GGToolkit</strong> nace de una idea simple: cada vez que jugamos aparecen dudas concretas —cuánto me falta para el personaje, si ese ataque mata, si ese código sigue activo— y casi nunca encuentras una respuesta clara y rápida. Por eso creamos una <strong>familia de webs gratuitas para gamers</strong>, cada una experta en resolver una de esas dudas. Una marca, muchas webs, cero relleno: encuentra la respuesta y vuelve a la partida.",
+    "featured": "El ecosistema GGToolkit — nuestras webs para gamers"
   },
   "ui": {
-    "tools": "Herramientas",
-    "guides": "Guías",
+    "tools": "Webs",
     "about": "Sobre nosotros",
+    "contact": "Contacto",
     "openTool": "Visitar la web",
-    "visit": "Visitar",
-    "category": "Categoría",
-    "games": "Juegos",
-    "allTools": "Ver todas las herramientas",
-    "allGuides": "Ver todas las guías",
-    "readGuide": "Leer guía",
-    "relatedTools": "Herramientas relacionadas",
+    "allTools": "Ver todas las webs",
+    "relatedTools": "Webs relacionadas",
     "sectionsTitle": "Secciones destacadas",
-    "backToTools": "← Todas las herramientas",
-    "backHome": "← Inicio",
-    "exploreCategory": "Explorar",
     "whatIsIt": "Qué es",
     "useCases": "Para qué sirve",
     "howToUse": "Cómo se usa",
     "faq": "Preguntas frecuentes",
-    "inThisSection": "Herramientas de esta sección",
-    "guidesInSection": "Guías relacionadas",
     "methodology": "Metodología",
-    "by": "Por",
-    "updated": "Actualizado",
     "home": "Inicio"
   },
   "about": {
@@ -61,6 +44,10 @@
     "h1": "Metodología: cómo trabajamos",
     "body": "<p>En GGToolkit nos tomamos en serio la <strong>precisión</strong>. Estas son las reglas con las que creamos cada herramienta y cada guía:</p><h2>Datos verificados</h2><p>Nuestras calculadoras usan fórmulas validadas contra referencias reconocidas (por ejemplo, el daño de Pokémon se valida contra el motor de Pokémon Showdown). Los códigos canjeables se prueban en el juego antes de publicarse. Los precios se comparan por unidad real.</p><h2>Actualización</h2><p>Las bases de datos y los rankings se mantienen al día con cada actualización relevante de los juegos. Indicamos la fecha cuando aporta confianza.</p><h2>Sin humo</h2><p>No prometemos \"trucos\" ni atajos mágicos. Si algo es una estafa (como los generadores de moneda gratis), lo decimos claro. Nuestro valor es la utilidad honesta, no el clickbait.</p><h2>Gratis y abierto</h2><p>Todo es gratuito y sin registro. Nos financiamos de forma discreta para mantener las herramientas en línea.</p>"
   },
+  "contact": {
+    "h1": "Contacto",
+    "body": "<p>¿Quieres hablar con <strong>GGToolkit</strong>? Detrás de la marca hay un equipo de jugadores que lee y responde personalmente cada mensaje. Escríbenos al correo que tienes más abajo y te contestamos lo antes posible.</p><p>Estas son las razones más habituales para ponerte en contacto con nosotros:</p><h2>🤝 Colaboraciones y partnerships</h2><p>¿Tienes una web, un canal o una comunidad gamer? Nos encantan las colaboraciones con las webs de <strong>GGToolkit</strong>: intercambios de contenido, menciones, integraciones o proyectos conjuntos. Cuéntanos tu idea y vemos cómo encajarla.</p><h2>🐞 Reportar un error</h2><p>Si una calculadora da un resultado extraño, un código no funciona o algo no carga bien, dinos en qué web de <strong>GGToolkit</strong> ocurre y cómo reproducirlo. Lo corregimos cuanto antes.</p><h2>💡 Sugerencias e ideas</h2><p>¿Echas en falta una herramienta, un juego o una función? Las webs de <strong>GGToolkit</strong> crecen con lo que nos pedís: tus ideas marcan lo que construimos a continuación.</p><h2>📰 Prensa y medios</h2><p>Si escribes sobre gaming y quieres datos, declaraciones o material sobre <strong>GGToolkit</strong>, escríbenos y te facilitamos lo que necesites.</p><h2>📢 Publicidad</h2><p>Para oportunidades publicitarias en las webs de <strong>GGToolkit</strong>, contáctanos con los detalles de tu propuesta.</p>"
+  },
   "consent": {
     "text": "Usamos cookies para analizar el tráfico y mejorar la web.",
     "accept": "Aceptar",
@@ -70,7 +57,7 @@
   },
   "footer": {
     "tagline": "Herramientas gratis para gamers. Menos relleno, más respuestas.",
-    "toolsTitle": "Herramientas",
+    "toolsTitle": "Webs",
     "siteTitle": "GGToolkit",
     "disclaimer": "GGToolkit es un proyecto independiente creado por fans. Las marcas de juegos pertenecen a sus respectivos propietarios.",
     "langLabel": "Idioma"

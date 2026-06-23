@@ -16,10 +16,7 @@ const SITE = cfg.url.replace(/\/$/, '');
 const T = {};
 cfg.languages.forEach((l) => { T[l] = JSON.parse(fs.readFileSync(path.join(SRC, 'i18n', l + '.json'), 'utf8')); });
 const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'tools.json'), 'utf8'));
-const GUIDES = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'guides.json'), 'utf8'));
-const PILLARS = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'pillars.json'), 'utf8'));
 const TOOLS = DATA.tools, CATS = DATA.categories;
-const toolBySlug = Object.fromEntries(TOOLS.map((t) => [t.slug, t]));
 
 function rmrf(p){ if (fs.existsSync(p)) fs.rmSync(p, { recursive: true, force: true }); }
 function write(p, c){ fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, c); }
@@ -30,15 +27,13 @@ function strip(s){ return String(s).replace(/<[^>]+>/g, ''); }
 // --- path helpers ---
 const aboutSlug = (l) => (l === 'es' ? 'sobre-nosotros' : 'about');
 const methodSlug = (l) => (l === 'es' ? 'metodologia' : 'methodology');
-const topicsSeg = (l) => (l === 'es' ? 'temas' : 'topics');
+const contactSlug = (l) => (l === 'es' ? 'contacto' : 'contact');
 const pHome = (l) => `/${l}/`;
 const pTools = (l) => `/${l}/${T[l].toolsPath}/`;
 const pTool = (l, slug) => `/${l}/${T[l].toolsPath}/${slug}/`;
-const pGuides = (l) => `/${l}/${T[l].guidesPath}/`;
-const pGuide = (l, g) => `/${l}/${T[l].guidesPath}/${l === 'es' ? g.slug : g.slugEn}/`;
 const pAbout = (l) => `/${l}/${aboutSlug(l)}/`;
 const pMethod = (l) => `/${l}/${methodSlug(l)}/`;
-const pPillar = (l, p) => `/${l}/${topicsSeg(l)}/${l === 'es' ? p.slug : p.slugEn}/`;
+const pContact = (l) => `/${l}/${contactSlug(l)}/`;
 
 function tracking(){
   let o = `\n<script>window.GA4_ID=${JSON.stringify(cfg.ga4Id || '')}</script>`;
@@ -92,8 +87,8 @@ function header(lang, current) {
 <a class="brand" href="${pHome(lang)}"><span class="logo">GG</span><span>GG<b>Toolkit</b></span></a>
 <nav class="nav">
 ${a(pTools(lang), t.ui.tools, 'tools')}
-${a(pGuides(lang), t.ui.guides, 'guides')}
 ${a(pAbout(lang), t.ui.about, 'about')}
+${a(pContact(lang), t.ui.contact, 'contact')}
 <button class="lang-sw" id="langBtn" aria-label="${esc(t.footer.langLabel)}">🌐 ${t.name} ▾</button>
 </nav>
 </div><nav class="lang-menu" id="langMenu">${langMenu}</nav></header>`;
@@ -101,7 +96,7 @@ ${a(pAbout(lang), t.ui.about, 'about')}
 function footer(lang) {
   const t = T[lang];
   const toolLinks = TOOLS.map((tool) => `<a href="${pTool(lang, tool.slug)}">${esc(tool.name)}</a>`).join('');
-  const siteLinks = `<a href="${pTools(lang)}">${esc(t.ui.tools)}</a><a href="${pGuides(lang)}">${esc(t.ui.guides)}</a><a href="${pAbout(lang)}">${esc(t.ui.about)}</a><a href="${pMethod(lang)}">${esc(t.ui.methodology)}</a>`;
+  const siteLinks = `<a href="${pTools(lang)}">${esc(t.ui.tools)}</a><a href="${pAbout(lang)}">${esc(t.ui.about)}</a><a href="${pContact(lang)}">${esc(t.ui.contact)}</a><a href="${pMethod(lang)}">${esc(t.ui.methodology)}</a>`;
   return `<footer class="site-footer"><div class="wrap">
 <div class="footer-cols">
 <div><div class="foot-brand"><span class="logo" style="width:24px;height:24px;border-radius:7px;display:inline-grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;font-weight:900;font-size:.7rem">GG</span> GGToolkit</div>
@@ -129,12 +124,6 @@ function toolCard(lang, tool) {
 <p>${esc(tool.tagline[lang])}</p>
 <span class="cat">${CATS[tool.category].icon} ${esc(catName(lang, tool.category))}</span></a>`;
 }
-function guideCard(lang, g) {
-  return `<a class="guide-card" href="${pGuide(lang, g)}"><span class="ic">${g.icon}</span> <h3>${esc(g.title[lang])}</h3><p>${esc(g.description[lang])}</p></a>`;
-}
-function pillarCard(lang, p) {
-  return `<a class="pillar-card" href="${pPillar(lang, p)}"><span class="ic">${p.icon}</span><h3>${esc(p.title[lang])}</h3><p>${esc(p.description[lang])}</p></a>`;
-}
 const orgLd = { "@context":"https://schema.org","@type":"Organization","name":"GGToolkit","url":SITE+"/","logo":SITE+"/assets/favicon.svg" };
 
 // --- pages ---
@@ -147,9 +136,7 @@ function homeHTML(lang) {
     + header(lang, 'home')
     + `<main class="wrap">
 <section class="hero"><h1>${esc(t.home.h1)}</h1><p>${t.home.intro}</p></section>
-<section class="section"><h2>🧭 ${esc(t.home.pillars)}</h2><div class="grid">${PILLARS.map((p)=>pillarCard(lang,p)).join('')}</div></section>
-<section class="section"><h2>🚀 ${esc(t.home.featured)}</h2><div class="grid">${TOOLS.map((x)=>toolCard(lang,x)).join('')}</div></section>
-<section class="section"><h2>📖 ${esc(t.home.latestGuides)}</h2>${GUIDES.slice(0,4).map((g)=>guideCard(lang,g)).join('')}<p style="margin-top:10px"><a href="${pGuides(lang)}">${esc(t.ui.allGuides)} →</a></p></section>
+<section class="section"><h2>🧩 ${esc(t.home.featured)}</h2><div class="grid">${TOOLS.map((x)=>toolCard(lang,x)).join('')}</div></section>
 </main>` + footer(lang);
 }
 function toolsIndexHTML(lang) {
@@ -203,62 +190,32 @@ ${(tool.faq&&tool.faq.length)?`<h2>${esc(t.ui.faq)}</h2><dl class="faq">${faqHtm
 <section class="section"><h2>${esc(t.ui.relatedTools)}</h2><div class="grid">${related.map((x)=>toolCard(lang,x)).join('')}</div></section>
 </main>` + footer(lang);
 }
-function pillarPageHTML(lang, p) {
-  const t = T[lang];
-  const alts = {}; cfg.languages.forEach((l) => alts[l] = pPillar(l, p));
-  const bc = breadcrumbLd(lang,[{name:t.ui.home,path:pHome(lang)},{name:p.title[lang],path:pPillar(lang,p)}]);
-  const tools = p.tools.map((s)=>toolBySlug[s]).filter(Boolean);
-  const guides = (p.guides||[]).map((gs)=>GUIDES.find((g)=>g.slug===gs)).filter(Boolean);
-  return head(lang, `${p.title[lang]} — ${t.meta.pillarSuffix} | GGToolkit`, p.description[lang], pPillar(lang,p), alts, [bc])
-    + header(lang, 'tools')
-    + `<main class="wrap">${crumb(lang,[{name:t.ui.home,path:pHome(lang)},{name:p.title[lang],path:pPillar(lang,p)}])}
-<section class="hero" style="padding:18px 0 6px;text-align:left"><h1>${p.icon} ${esc(p.title[lang])}</h1></section>
-<article class="article">${p.body[lang]}</article>
-<section class="section"><h2>${esc(t.ui.inThisSection)}</h2><div class="grid">${tools.map((x)=>toolCard(lang,x)).join('')}</div></section>
-${guides.length?`<section class="section"><h2>${esc(t.ui.guidesInSection)}</h2>${guides.map((g)=>guideCard(lang,g)).join('')}</section>`:''}
-</main>` + footer(lang);
-}
-function guidesIndexHTML(lang) {
-  const t = T[lang];
-  const alts = {}; cfg.languages.forEach((l) => alts[l] = pGuides(l));
-  const bc = breadcrumbLd(lang,[{name:t.ui.home,path:pHome(lang)},{name:t.ui.guides,path:pGuides(lang)}]);
-  return head(lang, t.meta.guidesTitle, t.meta.guidesDescription, pGuides(lang), alts, [bc])
-    + header(lang, 'guides')
-    + `<main class="wrap">${crumb(lang,[{name:t.ui.home,path:pHome(lang)},{name:t.ui.guides,path:pGuides(lang)}])}
-<section class="hero" style="padding:18px 0 14px;text-align:left"><h1>${esc(t.ui.guides)}</h1></section>
-${GUIDES.map((g)=>guideCard(lang,g)).join('')}</main>` + footer(lang);
-}
-function guidePageHTML(lang, g) {
-  const t = T[lang];
-  const alts = {}; cfg.languages.forEach((l) => alts[l] = pGuide(l, g));
-  const articleLd = { "@context":"https://schema.org","@type":"Article","headline":g.title[lang],"inLanguage":t.hreflang,
-    "datePublished":g.date,"dateModified":cfg.lastUpdated,"description":g.description[lang],"image":SITE+`/assets/og/og-${lang}.png`,
-    "author":{"@type":"Organization","name":g.author||"GGToolkit"},"publisher":orgLd };
-  const bc = breadcrumbLd(lang,[{name:t.ui.home,path:pHome(lang)},{name:t.ui.guides,path:pGuides(lang)},{name:g.title[lang],path:pGuide(lang,g)}]);
-  const pillar = g.pillar ? PILLARS.find((p)=>p.slug===g.pillar) : null;
-  const relatedTools = pillar ? pillar.tools.map((s)=>toolBySlug[s]).filter(Boolean).slice(0,3) : [];
-  return head(lang, `${g.title[lang]} | GGToolkit`, g.description[lang], pGuide(lang, g), alts, [articleLd, bc])
-    + header(lang, 'guides')
-    + `<main class="wrap">${crumb(lang,[{name:t.ui.home,path:pHome(lang)},{name:t.ui.guides,path:pGuides(lang)},{name:g.title[lang],path:pGuide(lang,g)}])}
-<article class="article"><h1>${esc(g.title[lang])}</h1>
-<p class="byline">${esc(t.ui.by)} <strong>${esc(g.author||'GGToolkit')}</strong> · ${esc(t.ui.updated)} ${esc(g.date)}</p>
-${g.body[lang]}
-<p style="margin-top:24px"><a class="btn" href="${pTools(lang)}">${esc(t.ui.allTools)} →</a></p></article>
-${relatedTools.length?`<section class="section"><h2>${esc(t.ui.relatedTools)}</h2><div class="grid">${relatedTools.map((x)=>toolCard(lang,x)).join('')}</div></section>`:''}
-</main>` + footer(lang);
-}
+const PAGE_KINDS = {
+  about:   { path: pAbout,   block: 'about',       metaT: 'aboutTitle',       metaD: 'aboutDescription',       nav: 'about' },
+  method:  { path: pMethod,  block: 'methodology', metaT: 'methodologyTitle',  metaD: 'methodologyDescription',  nav: null },
+  contact: { path: pContact, block: 'contact',     metaT: 'contactTitle',      metaD: 'contactDescription',      nav: 'contact' },
+};
 function simplePage(lang, kind) {
   const t = T[lang];
-  const isAbout = kind === 'about';
-  const slugPath = isAbout ? pAbout(lang) : pMethod(lang);
-  const alts = {}; cfg.languages.forEach((l) => alts[l] = isAbout ? pAbout(l) : pMethod(l));
-  const title = isAbout ? (t.meta.aboutTitle+' | GGToolkit') : (t.meta.methodologyTitle+' | GGToolkit');
-  const desc = isAbout ? t.meta.aboutDescription : t.meta.methodologyDescription;
-  const block = isAbout ? t.about : t.methodology;
-  const bc = breadcrumbLd(lang,[{name:t.ui.home,path:pHome(lang)},{name:strip(block.h1),path:slugPath}]);
-  const extra = isAbout ? `<p><a href="mailto:${esc(cfg.contactEmail)}">${esc(cfg.contactEmail)}</a></p><p style="margin-top:16px"><a class="btn primary" href="${pTools(lang)}">${esc(t.ui.allTools)} →</a></p>` : `<p style="margin-top:16px"><a class="btn" href="${pAbout(lang)}">${esc(t.ui.about)} →</a></p>`;
-  return head(lang, title, desc, slugPath, alts, [bc])
-    + header(lang, isAbout ? 'about' : null)
+  const k = PAGE_KINDS[kind];
+  const slugPath = k.path(lang);
+  const alts = {}; cfg.languages.forEach((l) => alts[l] = k.path(l));
+  const title = t.meta[k.metaT] + ' | GGToolkit';
+  const desc = t.meta[k.metaD];
+  const block = t[k.block];
+  const lds = [breadcrumbLd(lang,[{name:t.ui.home,path:pHome(lang)},{name:strip(block.h1),path:slugPath}])];
+  let extra;
+  if (kind === 'contact') {
+    lds.push({ "@context":"https://schema.org","@type":"ContactPage","name":strip(block.h1),"url":SITE+slugPath,"inLanguage":t.hreflang,
+      "mainEntity":{ "@type":"Organization","name":"GGToolkit","url":SITE+"/","email":cfg.contactEmail } });
+    extra = `<p style="margin-top:18px"><a class="btn primary" href="mailto:${esc(cfg.contactEmail)}">✉️ ${esc(cfg.contactEmail)}</a></p>`;
+  } else if (kind === 'about') {
+    extra = `<p><a href="mailto:${esc(cfg.contactEmail)}">${esc(cfg.contactEmail)}</a></p><p style="margin-top:16px"><a class="btn primary" href="${pTools(lang)}">${esc(t.ui.allTools)} →</a></p>`;
+  } else {
+    extra = `<p style="margin-top:16px"><a class="btn" href="${pAbout(lang)}">${esc(t.ui.about)} →</a></p>`;
+  }
+  return head(lang, title, desc, slugPath, alts, lds)
+    + header(lang, k.nav)
     + `<main class="wrap">${crumb(lang,[{name:t.ui.home,path:pHome(lang)},{name:strip(block.h1),path:slugPath}])}
 <article class="article" style="padding-top:8px"><h1>${esc(block.h1)}</h1>${block.body}${extra}</article></main>` + footer(lang);
 }
@@ -287,11 +244,9 @@ function sitemap() {
   const each = (fn, pr, cf) => cfg.languages.forEach((l) => { const al={}; cfg.languages.forEach((x)=>al[x]=fn(x)); add(fn(l), al, pr, cf); });
   each(pHome, '1.0', 'weekly');
   each(pTools, '0.9', 'weekly');
-  PILLARS.forEach((p) => cfg.languages.forEach((l)=>{ const al={}; cfg.languages.forEach((x)=>al[x]=pPillar(x,p)); add(pPillar(l,p), al, '0.8', 'weekly'); }));
   TOOLS.forEach((tool) => cfg.languages.forEach((l)=>{ const al={}; cfg.languages.forEach((x)=>al[x]=pTool(x,tool.slug)); add(pTool(l,tool.slug), al, '0.8', 'monthly'); }));
-  each(pGuides, '0.7', 'weekly');
-  GUIDES.forEach((g) => cfg.languages.forEach((l)=>{ const al={}; cfg.languages.forEach((x)=>al[x]=pGuide(x,g)); add(pGuide(l,g), al, '0.6', 'monthly'); }));
   each(pAbout, '0.3', 'yearly');
+  each(pContact, '0.4', 'yearly');
   each(pMethod, '0.3', 'yearly');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${U.join('\n')}\n</urlset>\n`;
 }
@@ -306,12 +261,10 @@ cfg.languages.forEach((l) => {
   write(path.join(DIST, l, 'index.html'), homeHTML(l));
   write(path.join(DIST, l, T[l].toolsPath, 'index.html'), toolsIndexHTML(l));
   TOOLS.forEach((tool) => write(path.join(DIST, l, T[l].toolsPath, tool.slug, 'index.html'), toolPageHTML(l, tool)));
-  PILLARS.forEach((p) => write(path.join(DIST, l, topicsSeg(l), (l==='es'?p.slug:p.slugEn), 'index.html'), pillarPageHTML(l, p)));
-  write(path.join(DIST, l, T[l].guidesPath, 'index.html'), guidesIndexHTML(l));
-  GUIDES.forEach((g) => write(path.join(DIST, l, T[l].guidesPath, (l==='es'?g.slug:g.slugEn), 'index.html'), guidePageHTML(l, g)));
   write(path.join(DIST, l, aboutSlug(l), 'index.html'), simplePage(l, 'about'));
+  write(path.join(DIST, l, contactSlug(l), 'index.html'), simplePage(l, 'contact'));
   write(path.join(DIST, l, methodSlug(l), 'index.html'), simplePage(l, 'method'));
-  console.log('  /' + l + '/  (home, '+TOOLS.length+' tools, '+PILLARS.length+' pillars, '+GUIDES.length+' guides, about, methodology)');
+  console.log('  /' + l + '/  (home, '+TOOLS.length+' tools, about, contact, methodology)');
 });
 write(path.join(DIST, 'index.html'), rootHTML());
 cp(path.join(SRC, 'assets/css/styles.css'), path.join(DIST, 'assets/css/styles.css'));

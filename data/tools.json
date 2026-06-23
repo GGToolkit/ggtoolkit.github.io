@@ -15,10 +15,10 @@
       "category": "calculators",
       "icon": "🎰",
       "games": ["Genshin Impact", "Honkai: Star Rail", "Zenless Zone Zero", "Wuthering Waves", "+62 gacha"],
-      "tagline": { "es": "Calculadoras de pity gratis para más de 60 juegos gacha", "en": "Free pity calculators for 60+ gacha games" },
+      "tagline": { "es": "Tu probabilidad exacta de pity en 60+ juegos gacha", "en": "Your exact pity odds across 60+ gacha games" },
       "intro": {
-        "es": "Calculadoras de <strong>pity</strong> gratis para Genshin Impact, Honkai: Star Rail, Zenless Zone Zero, Wuthering Waves y más de 62 juegos gacha, en 13 idiomas. Introduces tu pity actual y tus tiradas y te da la <strong>probabilidad exacta</strong> de conseguir a tu personaje en tu juego y banner.",
-        "en": "Free <strong>pity</strong> calculators for Genshin Impact, Honkai: Star Rail, Zenless Zone Zero, Wuthering Waves and 62+ gacha games, in 13 languages. Enter your current pity and pulls and it gives the <strong>exact probability</strong> of getting your character for your game and banner."
+        "es": "Las tiradas de un gacha no son magia: son <strong>probabilidad</strong>, y <strong>PityCalculator</strong> te da el número exacto. Calculadoras gratis de <strong>pity</strong> para Genshin Impact, Honkai: Star Rail, Zenless Zone Zero, Wuthering Waves y más de 62 juegos gacha, en 13 idiomas. Introduces tu pity actual y tus tiradas y sabes la <strong>probabilidad real</strong> de conseguir a tu personaje en tu banner antes de gastar un solo tirón.",
+        "en": "A gacha pull isn't luck — it's <strong>probability</strong>, and <strong>PityCalculator</strong> gives you the exact number. Free <strong>pity</strong> calculators for Genshin Impact, Honkai: Star Rail, Zenless Zone Zero, Wuthering Waves and 62+ gacha games, in 13 languages. Enter your current pity and pulls and see the <strong>real probability</strong> of landing your character on your banner before you spend a single pull."
       },
       "useCases": {
         "es": ["Saber tu probabilidad exacta antes de tirar", "Calcular cuánto te falta para el garantizado", "Consultar las reglas de pity de cada juego (cada uno es distinto)"],
@@ -29,7 +29,9 @@
         "en": ["Find your game (Genshin, HSR, ZZZ, WuWa…)", "Enter your current pity and available pulls", "Read your exact probability of getting the character"]
       },
       "faq": [
-        { "q": { "es": "¿Por qué una calculadora por juego?", "en": "Why a calculator per game?" }, "a": { "es": "Porque cada gacha tiene reglas de pity distintas: umbrales de hard pity, curvas de soft pity y sistemas de garantía diferentes. PityCalculator usa las reglas reales de cada juego.", "en": "Because every gacha has different pity rules: hard pity thresholds, soft pity curves and guarantee systems. PityCalculator uses each game's real rules." } }
+        { "q": { "es": "¿Por qué una calculadora por juego?", "en": "Why a calculator per game?" }, "a": { "es": "Porque cada gacha tiene reglas de pity distintas: umbrales de hard pity, curvas de soft pity y sistemas de garantía diferentes. PityCalculator usa las reglas reales de cada juego.", "en": "Because every gacha has different pity rules: hard pity thresholds, soft pity curves and guarantee systems. PityCalculator uses each game's real rules." } },
+        { "q": { "es": "¿Qué son el pity y el soft pity?", "en": "What are pity and soft pity?" }, "a": { "es": "El pity es el contador que te garantiza una recompensa al llegar a cierto número de tiradas (el hard pity). El soft pity es la zona previa en la que la probabilidad sube de golpe. PityCalculator tiene en cuenta ambos en cada juego.", "en": "Pity is the counter that guarantees a reward once you hit a certain number of pulls (hard pity). Soft pity is the zone just before, where the odds jump sharply. PityCalculator factors in both for every game." } },
+        { "q": { "es": "¿Es gratis y necesito registrarme?", "en": "Is it free? Do I need an account?" }, "a": { "es": "Es totalmente gratis y sin registro. Abres tu juego, introduces tu pity y tus tiradas, y tienes el resultado al instante.", "en": "It's completely free and needs no sign-up. Open your game, enter your pity and pulls, and you get the result instantly." } }
       ]
     },
     {
@@ -39,10 +41,10 @@
       "category": "calculators",
       "icon": "⚔️",
       "games": ["Pokémon Champions"],
-      "tagline": { "es": "Calculadora de daño de Pokémon Champions", "en": "Pokémon Champions damage calculator" },
+      "tagline": { "es": "Daño exacto y probabilidad de KO en Pokémon Champions", "en": "Exact damage and KO odds for Pokémon Champions" },
       "intro": {
-        "es": "Calculadora de <strong>daño</strong> para Pokémon Champions (nivel 50, sistema SP, dobles VGC). Rango de daño exacto y probabilidad de KO, validada contra Pokémon Showdown, en 4 idiomas. Incluye tabla de tipos, speed tiers y naturalezas.",
-        "en": "<strong>Damage</strong> calculator for Pokémon Champions (level 50, SP system, VGC doubles). Exact damage ranges and KO odds, validated against Pokémon Showdown, in 4 languages. Includes type chart, speed tiers and natures."
+        "es": "En el VGC de Pokémon, una partida se decide por un cálculo: ¿deja KO ese ataque o no? <strong>ChampionsDamage</strong> te lo responde. Calculadora de <strong>daño</strong> para Pokémon Champions (nivel 50, sistema SP, dobles VGC) con <strong>rango de daño exacto</strong> y probabilidad de KO, validada contra Pokémon Showdown y en 4 idiomas. Incluye tabla de tipos, speed tiers y naturalezas.",
+        "en": "In Pokémon VGC, a single calc can decide the match: does that move KO or not? <strong>ChampionsDamage</strong> answers it. A <strong>damage</strong> calculator for Pokémon Champions (level 50, SP system, VGC doubles) with <strong>exact damage ranges</strong> and KO odds, validated against Pokémon Showdown and in 4 languages. Includes type chart, speed tiers and natures."
       },
       "useCases": {
         "es": ["Saber si tu ataque deja KO al rival", "Ajustar tu reparto de SP para llegar a un cálculo", "Consultar la tabla de tipos, speed tiers y naturalezas"],
@@ -53,7 +55,9 @@
         "en": ["Pick attacker, defender and move", "Distribute SP and set nature, item and weather", "Read the damage range and KO odds"]
       },
       "faq": [
-        { "q": { "es": "¿Los números son fiables?", "en": "Are the numbers reliable?" }, "a": { "es": "Sí: la fórmula está validada contra @smogon/calc (el motor de Pokémon Showdown), así que el resultado es idéntico.", "en": "Yes: the formula is validated against @smogon/calc (the Pokémon Showdown engine), so the result is identical." } }
+        { "q": { "es": "¿Los números son fiables?", "en": "Are the numbers reliable?" }, "a": { "es": "Sí: la fórmula está validada contra @smogon/calc (el motor de Pokémon Showdown), así que el resultado es idéntico.", "en": "Yes: the formula is validated against @smogon/calc (the Pokémon Showdown engine), so the result is identical." } },
+        { "q": { "es": "¿Qué es el sistema SP de Champions?", "en": "What is Champions' SP system?" }, "a": { "es": "Pokémon Champions reparte el potencial con puntos SP en lugar de los EV/IV clásicos. La calculadora te deja repartir esos SP y ver al momento cómo cambia el daño para ajustar tu set al cálculo que buscas.", "en": "Pokémon Champions distributes potential with SP points instead of classic EVs/IVs. The calculator lets you spread those SP and instantly see how the damage changes, so you can tune your set to the calc you need." } },
+        { "q": { "es": "¿Sirve para dobles VGC?", "en": "Does it work for VGC doubles?" }, "a": { "es": "Sí, está pensada para el formato de dobles a nivel 50, con clima, objetos y naturalezas: justo donde el cálculo de daño decide el combate.", "en": "Yes, it's built for the level-50 doubles format, with weather, items and natures — exactly where the damage calc decides the battle." } }
       ]
     },
     {
@@ -71,10 +75,10 @@
         { "label": { "es": "Test de ratón", "en": "Mouse test" }, "url": "https://aimhub.gg/test-raton" },
         { "label": { "es": "Test de teclado", "en": "Keyboard test" }, "url": "https://aimhub.gg/test-teclado" }
       ],
-      "tagline": { "es": "Calculadoras de sensibilidad/eDPI y tests de aim", "en": "Sensitivity/eDPI calculators and aim tests" },
+      "tagline": { "es": "Sensibilidad, eDPI y tests de aim para apuntar mejor", "en": "Sensitivity, eDPI and aim tests to aim better" },
       "intro": {
-        "es": "Herramientas gaming gratis para mejorar tu <strong>rendimiento</strong>: calculadora de <strong>sensibilidad y eDPI</strong>, conversor de sensibilidad entre juegos, y tests de <strong>CPS, ratón, teclado y reacción</strong>. Sin registro.",
-        "en": "Free gaming tools to improve your <strong>performance</strong>: <strong>sensitivity and eDPI</strong> calculator, sensitivity converter between games, and <strong>CPS, mouse, keyboard and reaction</strong> tests. No sign-up."
+        "es": "Tu puntería depende de algo que casi nadie ajusta bien: la <strong>sensibilidad</strong>. <strong>AimHub</strong> reúne las herramientas gratis para clavarla: calculadora de <strong>sensibilidad y eDPI</strong>, conversor de sensibilidad entre juegos (Valorant, CS2, Apex…) y tests de <strong>CPS, ratón, teclado y reacción</strong>. Sin registro: mides, ajustas y apuntas mejor.",
+        "en": "Your aim hinges on something most players never tune properly: <strong>sensitivity</strong>. <strong>AimHub</strong> brings together the free tools to nail it: a <strong>sensitivity and eDPI</strong> calculator, a sensitivity converter between games (Valorant, CS2, Apex…) and <strong>CPS, mouse, keyboard and reaction</strong> tests. No sign-up: measure, tune and aim better."
       },
       "useCases": {
         "es": ["Calcular tu eDPI y convertir tu sensibilidad entre juegos", "Medir tus clics por segundo (CPS) y tu tiempo de reacción", "Probar tu ratón y teclado"],
@@ -85,7 +89,9 @@
         "en": ["Pick the calculator or test you want", "Enter your data or run the test", "Apply the result in your games"]
       },
       "faq": [
-        { "q": { "es": "¿Qué es el eDPI?", "en": "What is eDPI?" }, "a": { "es": "Es tu sensibilidad efectiva: DPI del ratón × sensibilidad del juego. Sirve para comparar e igualar tu sensibilidad entre juegos. AimHub te lo calcula.", "en": "It's your effective sensitivity: mouse DPI × in-game sensitivity. It lets you compare and match your sensitivity across games. AimHub calculates it for you." } }
+        { "q": { "es": "¿Qué es el eDPI?", "en": "What is eDPI?" }, "a": { "es": "Es tu sensibilidad efectiva: DPI del ratón × sensibilidad del juego. Sirve para comparar e igualar tu sensibilidad entre juegos. AimHub te lo calcula.", "en": "It's your effective sensitivity: mouse DPI × in-game sensitivity. It lets you compare and match your sensitivity across games. AimHub calculates it for you." } },
+        { "q": { "es": "¿Puedo pasar mi sensibilidad de un juego a otro?", "en": "Can I convert my sensitivity between games?" }, "a": { "es": "Sí. El conversor mantiene la misma distancia de giro (cm/360°) al cambiar de juego, así tu memoria muscular no se rompe al pasar de Valorant a CS2 o Apex.", "en": "Yes. The converter keeps the same turn distance (cm/360°) when you switch games, so your muscle memory doesn't break going from Valorant to CS2 or Apex." } },
+        { "q": { "es": "¿Para qué sirven los tests de CPS y de reacción?", "en": "What are the CPS and reaction tests for?" }, "a": { "es": "Para medir y entrenar: tus clics por segundo (CPS) y tu tiempo de reacción en milisegundos te dan una referencia objetiva para comprobar si realmente estás mejorando.", "en": "To measure and train: your clicks per second (CPS) and your reaction time in milliseconds give you an objective baseline to check whether you're actually improving." } }
       ]
     },
     {
@@ -105,10 +111,10 @@
         { "label": { "es": "Banners", "en": "Banners" }, "url": "https://www.genshincodex.com/banners" },
         { "label": { "es": "Comparador", "en": "Comparator" }, "url": "https://www.genshincodex.com/comparador" }
       ],
-      "tagline": { "es": "Base de datos, builds y calculadoras de Genshin (en español)", "en": "Genshin database, builds & calculators" },
+      "tagline": { "es": "Builds, base de datos y calculadoras de Genshin en español", "en": "Genshin builds, database and calculators" },
       "intro": {
-        "es": "<strong>Base de datos completa de Genshin Impact en español</strong>: builds de personajes, armas y artefactos, guías, y <strong>calculadoras</strong> de pity, resina y protogemas. Todo para optimizar tu equipo, rápido y sin ruido.",
-        "en": "A complete <strong>Genshin Impact database</strong>: character builds, weapons and artifacts, guides, and <strong>calculators</strong> for pity, resin and primogems. Everything to optimise your team, fast and clutter-free."
+        "es": "Optimizar en Genshin Impact es mucho farmeo y muchos números. <strong>Genshin Codex</strong> te los da masticados: una <strong>base de datos completa en español</strong> con builds de personajes, armas y artefactos, tier lists, equipos y guías, más <strong>calculadoras</strong> de pity, resina y protogemas. Todo para sacarle el máximo a tu equipo, rápido y sin ruido.",
+        "en": "Optimising in Genshin Impact means a lot of farming and a lot of numbers. <strong>Genshin Codex</strong> serves them ready to use: a complete <strong>Genshin Impact database</strong> with character builds, weapons and artifacts, tier lists, teams and guides, plus <strong>calculators</strong> for pity, resin and primogems. Everything to get the most from your team, fast and clutter-free."
       },
       "useCases": {
         "es": ["Consultar la mejor build de un personaje", "Calcular pity, resina o protogemas", "Comparar armas y artefactos con sus estadísticas"],
@@ -119,7 +125,9 @@
         "en": ["Search the character, weapon or calculator", "Check builds, materials and stats", "Plan your farming with the data"]
       },
       "faq": [
-        { "q": { "es": "¿Está en español y actualizado?", "en": "Is it in your language and up to date?" }, "a": { "es": "Sí, es una base de datos de Genshin en español que se mantiene al día con cada versión del juego.", "en": "Yes, it's a Genshin database kept up to date with every game version." } }
+        { "q": { "es": "¿Está en español y actualizado?", "en": "Is it in your language and up to date?" }, "a": { "es": "Sí, es una base de datos de Genshin en español que se mantiene al día con cada versión del juego.", "en": "Yes, it's a Genshin database kept up to date with every game version." } },
+        { "q": { "es": "¿Incluye tier list y equipos recomendados?", "en": "Does it include a tier list and recommended teams?" }, "a": { "es": "Sí: tier list por roles, equipos recomendados y un comparador para enfrentar personajes, armas y artefactos por sus estadísticas reales.", "en": "Yes: a role-based tier list, recommended teams and a comparator to pit characters, weapons and artifacts against each other by their real stats." } },
+        { "q": { "es": "¿Las calculadoras son de pago?", "en": "Are the calculators paid?" }, "a": { "es": "No, todo es gratis. Tienes calculadoras de pity, de resina y de protogemas para planificar tu farmeo y tus tiradas sin pagar nada.", "en": "No, it's all free. You get pity, resin and primogem calculators to plan your farming and pulls without paying a thing." } }
       ]
     },
     {
@@ -135,8 +143,8 @@
       ],
       "tagline": { "es": "Encuentra juegos similares a los que ya te gustan", "en": "Find games similar to the ones you love" },
       "intro": {
-        "es": "Un <strong>buscador de juegos similares</strong>: descubre títulos parecidos a los que ya amas usando más de <strong>70 atributos reales de gameplay</strong> (género, mecánicas, ambientación y modo). Compara más de 6.700 juegos, gratis y sin registro.",
-        "en": "A <strong>similar-games finder</strong>: discover titles like the ones you already love using <strong>70+ real gameplay attributes</strong> (genre, mechanics, setting and mode). Compare 6,700+ games, free and no sign-up."
+        "es": "Hay más juegos buenos de los que podrás jugar nunca; el problema es <strong>encontrar el tuyo</strong>. <strong>iRankGames</strong> es un buscador de <strong>juegos similares</strong>: parte de un título que ya te encanta y te recomienda otros de verdad parecidos, comparando más de <strong>70 atributos reales de gameplay</strong> (género, mecánicas, ambientación y modo) entre más de 6.700 juegos. Gratis y sin registro.",
+        "en": "There are more great games than you'll ever play; the hard part is <strong>finding yours</strong>. <strong>iRankGames</strong> is a <strong>similar-games finder</strong>: start from a title you already love and it recommends ones that genuinely match, comparing <strong>70+ real gameplay attributes</strong> (genre, mechanics, setting and mode) across 6,700+ games. Free and no sign-up."
       },
       "useCases": {
         "es": ["Encontrar juegos parecidos a uno que te encantó", "Descubrir títulos por mecánicas, ambientación o modo", "Comparar juegos por atributos reales de gameplay"],
@@ -147,7 +155,9 @@
         "en": ["Search a game you like", "See similar games by their attributes", "Discover your next game"]
       },
       "faq": [
-        { "q": { "es": "¿Cómo decide qué juegos son similares?", "en": "How does it decide which games are similar?" }, "a": { "es": "Compara más de 70 atributos reales de gameplay (género, mecánicas, ambientación, modo…), no solo el género. Por eso las recomendaciones encajan de verdad.", "en": "It compares 70+ real gameplay attributes (genre, mechanics, setting, mode…), not just genre. That's why the recommendations actually fit." } }
+        { "q": { "es": "¿Cómo decide qué juegos son similares?", "en": "How does it decide which games are similar?" }, "a": { "es": "Compara más de 70 atributos reales de gameplay (género, mecánicas, ambientación, modo…), no solo el género. Por eso las recomendaciones encajan de verdad.", "en": "It compares 70+ real gameplay attributes (genre, mechanics, setting, mode…), not just genre. That's why the recommendations actually fit." } },
+        { "q": { "es": "¿Funciona para cualquier plataforma?", "en": "Does it work for any platform?" }, "a": { "es": "Sí, cubre más de 6.700 juegos multiplataforma (PC y consolas), así que puedes descubrir títulos sin importar dónde juegues.", "en": "Yes, it covers 6,700+ multiplatform games (PC and consoles), so you can discover titles no matter where you play." } },
+        { "q": { "es": "¿También hay listas de los mejores juegos?", "en": "Are there best-games lists too?" }, "a": { "es": "Sí: además del buscador de similares, tiene listas de los mejores juegos por categoría para descubrir por dónde empezar.", "en": "Yes: alongside the similar-games finder, it has best-games lists by category to help you discover where to start." } }
       ]
     },
     {
@@ -163,10 +173,10 @@
         { "label": { "es": "Valorant", "en": "Valorant" }, "url": "https://recursosgamer.com/valorant" },
         { "label": { "es": "Genshin Impact", "en": "Genshin Impact" }, "url": "https://recursosgamer.com/genshin-impact" }
       ],
-      "tagline": { "es": "¿Funcionan los generadores? Y compara precios de monedas en 79+ juegos", "en": "Do generators work? Plus currency price comparison across 79+ games" },
+      "tagline": { "es": "¿Estafa o no? La verdad sobre generadores y el mejor precio de monedas", "en": "Scam or not? The truth about generators and the best currency prices" },
       "intro": {
-        "es": "Te dice la verdad sobre los <strong>generadores gratis</strong> de Robux, V-Bucks, gemas… (¿funcionan o son estafa?) y un <strong>comparador de precios</strong> para comprar monedas más baratas y seguras en más de 79 juegos, con foco en España.",
-        "en": "The truth about free <strong>generators</strong> of Robux, V-Bucks, gems… (do they work, or are they scams?) plus a <strong>price comparator</strong> to buy currency cheaper and safely across 79+ games."
+        "es": "\"Generador gratis de Robux\": casi siempre, mentira. <strong>RecursosGamer</strong> te dice la verdad sobre los <strong>generadores</strong> de Robux, V-Bucks, gemas y demás (¿funcionan o son estafa?) y, cuando toca pagar, un <strong>comparador de precios</strong> para conseguir monedas más baratas y seguras en más de 79 juegos, con foco en España.",
+        "en": "\"Free Robux generator\": almost always a lie. <strong>RecursosGamer</strong> tells you the truth about <strong>generators</strong> for Robux, V-Bucks, gems and more (do they work, or are they scams?) and, when you do need to pay, a <strong>price comparator</strong> to get currency cheaper and safer across 79+ games."
       },
       "useCases": {
         "es": ["Saber si un 'generador gratis' funciona o es estafa", "Comprar moneda al mejor precio por unidad", "Comparar tiendas oficiales y de terceros (España)"],
@@ -177,7 +187,9 @@
         "en": ["Pick your game", "Check if the free method works (or why it doesn't)", "Compare prices and buy from the cheapest, safest option"]
       },
       "faq": [
-        { "q": { "es": "¿Funcionan los generadores de moneda gratis?", "en": "Do free currency generators work?" }, "a": { "es": "Casi nunca: la mayoría son estafa. RecursosGamer te explica cuáles no funcionan y te compara precios reales para comprar de forma segura.", "en": "Almost never: most are scams. RecursosGamer explains which don't work and compares real prices so you can buy safely." } }
+        { "q": { "es": "¿Funcionan los generadores de moneda gratis?", "en": "Do free currency generators work?" }, "a": { "es": "Casi nunca: la mayoría son estafa. RecursosGamer te explica cuáles no funcionan y te compara precios reales para comprar de forma segura.", "en": "Almost never: most are scams. RecursosGamer explains which don't work and compares real prices so you can buy safely." } },
+        { "q": { "es": "¿Por qué los generadores piden 'verificación humana'?", "en": "Why do generators ask for 'human verification'?" }, "a": { "es": "Es la trampa de siempre: te hacen completar encuestas o instalar apps con la promesa de la moneda, pero esta nunca llega. RecursosGamer te explica cómo funcionan estas estafas para que no caigas.", "en": "It's the classic trap: they make you complete surveys or install apps with the promise of currency that never arrives. RecursosGamer explains how these scams work so you don't fall for them." } },
+        { "q": { "es": "¿Es seguro comprar la moneda que recomienda?", "en": "Is it safe to buy the currency it recommends?" }, "a": { "es": "Sí: compara tiendas oficiales y de terceros de confianza por precio real por unidad, para que pagues menos sin arriesgar tu cuenta.", "en": "Yes: it compares official and trusted third-party stores by real price per unit, so you pay less without putting your account at risk." } }
       ]
     },
     {
@@ -196,8 +208,8 @@
       ],
       "tagline": { "es": "Qué ordenador comprar según tu uso, sin afiliados", "en": "Which computer to buy for your use — no affiliates" },
       "intro": {
-        "es": "Te ayuda a decidir <strong>qué ordenador comprar</strong> según tu uso —gaming, edición de vídeo, programación o uso diario— con <strong>análisis honestos, sin publicidad ni afiliados</strong>. Recomendaciones claras, sin jerga innecesaria.",
-        "en": "Helps you decide <strong>which computer to buy</strong> for your use —gaming, video editing, programming or daily use— with <strong>honest analysis, no ads or affiliates</strong>. Clear recommendations, no needless jargon."
+        "es": "Comprar un ordenador está lleno de jerga y de webs que cobran comisión por recomendártelo. <strong>ConfiguraPC</strong> hace lo contrario: te ayuda a decidir <strong>qué ordenador comprar</strong> según tu uso —gaming, edición de vídeo, programación o uso diario— con <strong>análisis honestos, sin publicidad ni afiliados</strong>. Recomendaciones claras, sin jerga innecesaria.",
+        "en": "Buying a computer is full of jargon and sites that earn a commission for recommending it. <strong>ConfiguraPC</strong> does the opposite: it helps you decide <strong>which computer to buy</strong> for your use —gaming, video editing, programming or daily use— with <strong>honest analysis, no ads or affiliates</strong>. Clear recommendations, no needless jargon."
       },
       "useCases": {
         "es": ["Saber qué PC o portátil comprar para tu uso", "Comparar opciones por presupuesto", "Decidir con análisis honestos, sin sesgo de afiliados"],
@@ -208,7 +220,9 @@
         "en": ["Pick your use (gaming, editing, programming, daily)", "See the recommendation and analysis", "Make your purchase with confidence"]
       },
       "faq": [
-        { "q": { "es": "¿Tiene enlaces de afiliado?", "en": "Does it use affiliate links?" }, "a": { "es": "No. Los análisis son honestos y sin afiliados ni publicidad, para que la recomendación sea de verdad la mejor para ti.", "en": "No. The analysis is honest, with no affiliates or ads, so the recommendation is genuinely the best for you." } }
+        { "q": { "es": "¿Tiene enlaces de afiliado?", "en": "Does it use affiliate links?" }, "a": { "es": "No. Los análisis son honestos y sin afiliados ni publicidad, para que la recomendación sea de verdad la mejor para ti.", "en": "No. The analysis is honest, with no affiliates or ads, so the recommendation is genuinely the best for you." } },
+        { "q": { "es": "¿Me recomienda según mi presupuesto?", "en": "Does it recommend by budget?" }, "a": { "es": "Sí: puedes comparar opciones por presupuesto y por uso para encontrar el equilibrio entre precio y rendimiento que necesitas.", "en": "Yes: you can compare options by budget and by use to find the balance between price and performance you need." } },
+        { "q": { "es": "¿Hace falta saber de hardware?", "en": "Do I need to know about hardware?" }, "a": { "es": "No. Eliges tu uso y las recomendaciones vienen explicadas sin jerga, para que entiendas por qué se te aconseja cada equipo.", "en": "No. You pick your use and the recommendations come explained without jargon, so you understand why each setup is suggested." } }
       ]
     },
     {
@@ -218,10 +232,10 @@
       "category": "codes",
       "icon": "🎟️",
       "games": ["+469 juegos móviles", "Genshin", "Honkai", "Free Fire"],
-      "tagline": { "es": "Códigos de canje de juegos móviles, verificados a diario", "en": "Mobile game redeem codes, verified daily" },
+      "tagline": { "es": "Códigos de canje de 469+ juegos móviles, verificados a diario", "en": "Redeem codes for 469+ mobile games, verified daily" },
       "intro": {
-        "es": "<strong>Códigos de canje</strong> (gift y redeem codes) de más de <strong>469 juegos móviles</strong>, verificados cada 24 horas. Solo ves los que están activos hoy, con sus recompensas gratis y las instrucciones para canjearlos.",
-        "en": "<strong>Redeem and gift codes</strong> for 469+ <strong>mobile games</strong>, verified every 24 hours. You only see the ones active today, with their free rewards and redemption instructions."
+        "es": "Las listas de códigos suelen estar llenas de códigos caducados que solo te hacen perder el tiempo. <strong>RedeemCodesToday</strong> no: reúne <strong>códigos de canje</strong> (gift y redeem codes) de más de <strong>469 juegos móviles</strong>, verificados cada 24 horas. Solo ves los que están <strong>activos hoy</strong>, con sus recompensas gratis y las instrucciones para canjearlos.",
+        "en": "Code lists are usually full of expired codes that only waste your time. <strong>RedeemCodesToday</strong> isn't: it gathers <strong>redeem and gift codes</strong> for 469+ <strong>mobile games</strong>, verified every 24 hours. You only see the ones <strong>active today</strong>, with their free rewards and redemption instructions."
       },
       "useCases": {
         "es": ["Encontrar códigos activos hoy sin listas muertas", "Conseguir recompensas gratis antes de que caduquen", "Saber qué código sigue activo y cuál no"],
@@ -232,7 +246,9 @@
         "en": ["Find your mobile game", "Copy the active code (verified today)", "Follow the game's redemption steps"]
       },
       "faq": [
-        { "q": { "es": "¿Cada cuánto se verifican?", "en": "How often are codes verified?" }, "a": { "es": "Cada 24 horas. Solo se publican los códigos activos verificados ese día, así no pierdes el tiempo con listas caducadas.", "en": "Every 24 hours. Only codes verified active that day are published, so you don't waste time on expired lists." } }
+        { "q": { "es": "¿Cada cuánto se verifican?", "en": "How often are codes verified?" }, "a": { "es": "Cada 24 horas. Solo se publican los códigos activos verificados ese día, así no pierdes el tiempo con listas caducadas.", "en": "Every 24 hours. Only codes verified active that day are published, so you don't waste time on expired lists." } },
+        { "q": { "es": "¿Por qué caducan los códigos?", "en": "Why do codes expire?" }, "a": { "es": "Los estudios los publican por eventos, streams o aniversarios y suelen durar poco. Por eso RedeemCodesToday verifica a diario: para que canjees solo los que siguen vivos.", "en": "Studios release them for events, streams or anniversaries and they usually last only a short while. That's why RedeemCodesToday checks daily — so you only redeem the ones still live." } },
+        { "q": { "es": "¿Cómo canjeo un código?", "en": "How do I redeem a code?" }, "a": { "es": "Cada juego tiene su método (dentro del juego o en una web oficial de canje). En cada ficha te damos el código activo y las instrucciones concretas para canjearlo paso a paso.", "en": "Each game has its own method (in-game or on an official redemption page). For every game we give you the active code and the exact step-by-step instructions to redeem it." } }
       ]
     }
   ]

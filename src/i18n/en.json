@@ -4,53 +4,36 @@
   "hreflang": "en",
   "name": "English",
   "toolsPath": "tools",
-  "guidesPath": "guides",
   "meta": {
     "homeTitle": "GGToolkit — Free tools & resources for gamers",
     "homeDescription": "Pity and damage calculators, a Genshin database, a similar-games finder, mobile game codes, an in-game currency comparator and PC buying guides. Free, no sign-up.",
     "toolsTitle": "All gaming sites & resources | GGToolkit",
     "toolsDescription": "GGToolkit's full directory: calculators, databases, a games finder, a currency comparator, codes and PC help. Free and no sign-up.",
-    "guidesTitle": "Guides for gamers | GGToolkit",
-    "guidesDescription": "Practical guides to get the most out of your games: gacha pity, competitive damage, redeem codes, hardware and more.",
     "aboutTitle": "About GGToolkit",
     "aboutDescription": "What GGToolkit is: an ecosystem of free tools built for the gaming community.",
     "methodologyTitle": "Methodology — how we work",
     "methodologyDescription": "How we build and verify GGToolkit's tools and guides: sources, validation and updates.",
-    "pillarSuffix": "tools & guides"
+    "contactTitle": "Contact",
+    "contactDescription": "Contact GGToolkit: collaborations, bug reports, suggestions, press and advertising. We reply personally."
   },
   "home": {
-    "h1": "Free tools & resources for gamers",
-    "intro": "GGToolkit brings together our <strong>free sites and resources</strong> for players in one place: <strong>calculators</strong> for pity and damage, a Genshin <strong>database</strong>, a <strong>similar-games finder</strong>, mobile game <strong>codes</strong>, an in-game <strong>currency comparator</strong> and <strong>PC buying guides</strong>. All fast, no sign-up, and built to help you play better.",
-    "featured": "Featured tools",
-    "byCategory": "By category",
-    "pillars": "Explore by topic",
-    "latestGuides": "Latest guides"
+    "h1": "GGToolkit: the ecosystem of free sites for gamers",
+    "intro": "<strong>GGToolkit</strong> was born from a simple idea: every time we play, concrete questions come up —how far am I from that character, will this move KO, is that code still active— and you almost never find a clear, fast answer. So we built a <strong>family of free sites for gamers</strong>, each one expert at solving one of those questions. One brand, many sites, zero filler: find the answer and get back to the game.",
+    "featured": "The GGToolkit ecosystem — our gaming sites"
   },
   "ui": {
-    "tools": "Tools",
-    "guides": "Guides",
+    "tools": "Sites",
     "about": "About",
+    "contact": "Contact",
     "openTool": "Visit the site",
-    "visit": "Visit",
-    "category": "Category",
-    "games": "Games",
-    "allTools": "See all tools",
-    "allGuides": "See all guides",
-    "readGuide": "Read guide",
-    "relatedTools": "Related tools",
+    "allTools": "See all sites",
+    "relatedTools": "Related sites",
     "sectionsTitle": "Featured sections",
-    "backToTools": "← All tools",
-    "backHome": "← Home",
-    "exploreCategory": "Explore",
     "whatIsIt": "What it is",
     "useCases": "What it's for",
     "howToUse": "How to use it",
     "faq": "FAQ",
-    "inThisSection": "Tools in this section",
-    "guidesInSection": "Related guides",
     "methodology": "Methodology",
-    "by": "By",
-    "updated": "Updated",
     "home": "Home"
   },
   "about": {
@@ -61,6 +44,10 @@
     "h1": "Methodology: how we work",
     "body": "<p>At GGToolkit we take <strong>accuracy</strong> seriously. These are the rules we build every tool and guide by:</p><h2>Verified data</h2><p>Our calculators use formulas validated against recognised references (for example, Pokémon damage is validated against the Pokémon Showdown engine). Redeem codes are tested in-game before publishing. Prices are compared per real unit.</p><h2>Updates</h2><p>Databases and rankings are kept up to date with every relevant game update. We show the date when it builds trust.</p><h2>No smoke</h2><p>We don't promise \"hacks\" or magic shortcuts. If something is a scam (like free currency generators), we say so plainly. Our value is honest usefulness, not clickbait.</p><h2>Free and open</h2><p>Everything is free and no sign-up. We fund ourselves discreetly to keep the tools online.</p>"
   },
+  "contact": {
+    "h1": "Contact",
+    "body": "<p>Want to talk to <strong>GGToolkit</strong>? Behind the brand there's a team of players who read and personally reply to every message. Email us at the address below and we'll get back to you as soon as we can.</p><p>These are the most common reasons to get in touch:</p><h2>🤝 Collaborations & partnerships</h2><p>Got a site, a channel or a gaming community? We love collaborating across the <strong>GGToolkit</strong> sites: content swaps, mentions, integrations or joint projects. Tell us your idea and we'll find a way to make it work.</p><h2>🐞 Report a bug</h2><p>If a calculator returns something odd, a code doesn't work or something won't load, tell us which <strong>GGToolkit</strong> site it happens on and how to reproduce it. We'll fix it fast.</p><h2>💡 Suggestions & ideas</h2><p>Missing a tool, a game or a feature? The <strong>GGToolkit</strong> sites grow with what you ask for — your ideas shape what we build next.</p><h2>📰 Press & media</h2><p>If you write about gaming and need data, quotes or assets about <strong>GGToolkit</strong>, reach out and we'll provide what you need.</p><h2>📢 Advertising</h2><p>For advertising opportunities across the <strong>GGToolkit</strong> sites, contact us with the details of your proposal.</p>"
+  },
   "consent": {
     "text": "We use cookies to analyse traffic and improve the site.",
     "accept": "Accept",
@@ -70,7 +57,7 @@
   },
   "footer": {
     "tagline": "Free tools for gamers. Less filler, more answers.",
-    "toolsTitle": "Tools",
+    "toolsTitle": "Sites",
     "siteTitle": "GGToolkit",
     "disclaimer": "GGToolkit is an independent project made by fans. Game trademarks belong to their respective owners.",
     "langLabel": "Language"
