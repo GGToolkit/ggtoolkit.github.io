@@ -65,7 +65,7 @@ ${hl}
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${SITE}${canonical}"><meta property="og:image" content="${SITE}${og}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0e1018">
+<meta name="theme-color" content="#faf8f4">
 <link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest">
 <link rel="stylesheet" href="/assets/css/styles.css">
 ${ldBlock}${tracking()}
@@ -89,7 +89,7 @@ function header(lang, current) {
 ${a(pTools(lang), t.ui.tools, 'tools')}
 ${a(pAbout(lang), t.ui.about, 'about')}
 ${a(pContact(lang), t.ui.contact, 'contact')}
-<button class="lang-sw" id="langBtn" aria-label="${esc(t.footer.langLabel)}">🌐 ${t.name} ▾</button>
+<button class="lang-sw" id="langBtn" aria-label="${esc(t.footer.langLabel)}">${t.name} ▾</button>
 </nav>
 </div><nav class="lang-menu" id="langMenu">${langMenu}</nav></header>`;
 }
@@ -99,7 +99,7 @@ function footer(lang) {
   const siteLinks = `<a href="${pTools(lang)}">${esc(t.ui.tools)}</a><a href="${pAbout(lang)}">${esc(t.ui.about)}</a><a href="${pContact(lang)}">${esc(t.ui.contact)}</a><a href="${pMethod(lang)}">${esc(t.ui.methodology)}</a>`;
   return `<footer class="site-footer"><div class="wrap">
 <div class="footer-cols">
-<div><div class="foot-brand"><span class="logo" style="width:24px;height:24px;border-radius:7px;display:inline-grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;font-weight:900;font-size:.7rem">GG</span> GGToolkit</div>
+<div><div class="foot-brand"><span class="logo" style="width:24px;height:24px;border-radius:7px;display:inline-grid;place-items:center;background:linear-gradient(135deg,#6c5cff,#22d3a6);color:#fff;font-weight:900;font-size:.7rem">GG</span> GGToolkit</div>
 <p class="muted">${esc(t.footer.tagline)}</p></div>
 <div><h4>${esc(t.footer.toolsTitle)}</h4>${toolLinks}</div>
 <div><h4>${esc(t.footer.siteTitle)}</h4>${siteLinks}</div>
@@ -116,13 +116,13 @@ function hasLogo(slug){ return fs.existsSync(path.join(SRC, 'assets/logos', slug
 function logoMark(tool, cls){
   return hasLogo(tool.slug)
     ? `<img class="${cls}" src="/assets/logos/${tool.slug}.png" alt="${esc(tool.name)}" loading="lazy" width="256" height="256">`
-    : `<span class="${cls} emoji">${tool.icon}</span>`;
+    : `<span class="${cls} mono">${esc(tool.name.replace(/[^A-Za-z]/g,'').slice(0,2).toUpperCase())}</span>`;
 }
 function toolCard(lang, tool) {
   return `<a class="tool-card" href="${pTool(lang, tool.slug)}">
 <span class="tc-head">${logoMark(tool, 'logo-img')}<h3>${esc(tool.name)}</h3></span>
 <p>${esc(tool.tagline[lang])}</p>
-<span class="cat">${CATS[tool.category].icon} ${esc(catName(lang, tool.category))}</span></a>`;
+<span class="cat">${esc(catName(lang, tool.category))}</span></a>`;
 }
 const orgLd = { "@context":"https://schema.org","@type":"Organization","name":"GGToolkit","url":SITE+"/","logo":SITE+"/assets/favicon.svg" };
 
@@ -136,7 +136,7 @@ function homeHTML(lang) {
     + header(lang, 'home')
     + `<main class="wrap">
 <section class="hero"><h1>${esc(t.home.h1)}</h1><p>${t.home.intro}</p></section>
-<section class="section"><h2>🧩 ${esc(t.home.featured)}</h2><div class="grid">${TOOLS.map((x)=>toolCard(lang,x)).join('')}</div></section>
+<section class="section"><h2>${esc(t.home.featured)}</h2><div class="grid">${TOOLS.map((x)=>toolCard(lang,x)).join('')}</div></section>
 </main>` + footer(lang);
 }
 function toolsIndexHTML(lang) {
@@ -148,7 +148,7 @@ function toolsIndexHTML(lang) {
   const byCat = Object.keys(CATS).map((k) => {
     const list = TOOLS.filter((x) => x.category === k);
     if (!list.length) return '';
-    return `<section class="section" id="${k}"><h2>${CATS[k].icon} ${esc(catName(lang, k))}</h2><div class="grid">${list.map((x)=>toolCard(lang,x)).join('')}</div></section>`;
+    return `<section class="section" id="${k}"><h2>${esc(catName(lang, k))}</h2><div class="grid">${list.map((x)=>toolCard(lang,x)).join('')}</div></section>`;
   }).join('');
   return head(lang, t.meta.toolsTitle, t.meta.toolsDescription, pTools(lang), alts, [itemList, bc])
     + header(lang, 'tools')
@@ -208,7 +208,7 @@ function simplePage(lang, kind) {
   if (kind === 'contact') {
     lds.push({ "@context":"https://schema.org","@type":"ContactPage","name":strip(block.h1),"url":SITE+slugPath,"inLanguage":t.hreflang,
       "mainEntity":{ "@type":"Organization","name":"GGToolkit","url":SITE+"/","email":cfg.contactEmail } });
-    extra = `<p style="margin-top:18px"><a class="btn primary" href="mailto:${esc(cfg.contactEmail)}">✉️ ${esc(cfg.contactEmail)}</a></p>`;
+    extra = `<p style="margin-top:18px"><a class="btn primary" href="mailto:${esc(cfg.contactEmail)}">${esc(cfg.contactEmail)}</a></p>`;
   } else if (kind === 'about') {
     extra = `<p><a href="mailto:${esc(cfg.contactEmail)}">${esc(cfg.contactEmail)}</a></p><p style="margin-top:16px"><a class="btn primary" href="${pTools(lang)}">${esc(t.ui.allTools)} →</a></p>`;
   } else {
@@ -251,7 +251,7 @@ function sitemap() {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${U.join('\n')}\n</urlset>\n`;
 }
 const robots = () => `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
-const manifest = () => JSON.stringify({ name:'GGToolkit', short_name:'GGToolkit', start_url:'/', display:'standalone', background_color:'#0e1018', theme_color:'#0e1018', icons:[{src:'/assets/icons/favicon.svg',sizes:'any',type:'image/svg+xml'},{src:'/assets/icons/icon-192.png',sizes:'192x192',type:'image/png',purpose:'any maskable'},{src:'/assets/icons/icon-512.png',sizes:'512x512',type:'image/png',purpose:'any maskable'}] });
+const manifest = () => JSON.stringify({ name:'GGToolkit', short_name:'GGToolkit', start_url:'/', display:'standalone', background_color:'#faf8f4', theme_color:'#faf8f4', icons:[{src:'/assets/icons/favicon.svg',sizes:'any',type:'image/svg+xml'},{src:'/assets/icons/icon-192.png',sizes:'192x192',type:'image/png',purpose:'any maskable'},{src:'/assets/icons/icon-512.png',sizes:'512x512',type:'image/png',purpose:'any maskable'}] });
 const favicon = () => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#6c5cff"/><text x="32" y="42" font-family="Arial,sans-serif" font-size="30" font-weight="900" fill="#fff" text-anchor="middle">GG</text></svg>`;
 
 // --- build ---
