@@ -3,7 +3,7 @@
   "locale": "en_US",
   "hreflang": "en",
   "name": "English",
-  "toolsPath": "webs",
+  "toolsPath": "sites",
   "meta": {
     "homeTitle": "GGToolkit — Free tools & resources for gamers",
     "homeDescription": "Pity and damage calculators, a Genshin database, a similar-games finder, mobile game codes, an in-game currency comparator and PC buying guides. Free, no sign-up.",
@@ -22,12 +22,12 @@
     "featured": "The GGToolkit ecosystem — our gaming sites"
   },
   "ui": {
-    "tools": "Webs",
+    "tools": "Sites",
     "about": "About",
     "contact": "Contact",
     "openTool": "Visit the site",
-    "allTools": "See all webs",
-    "relatedTools": "Related webs",
+    "allTools": "See all sites",
+    "relatedTools": "Related sites",
     "sectionsTitle": "Featured sections",
     "whatIsIt": "What it is",
     "useCases": "What it's for",
@@ -57,7 +57,7 @@
   },
   "footer": {
     "tagline": "Free tools for gamers. Less filler, more answers.",
-    "toolsTitle": "Webs",
+    "toolsTitle": "Sites",
     "siteTitle": "GGToolkit",
     "disclaimer": "GGToolkit is an independent project made by fans. Game trademarks belong to their respective owners.",
     "langLabel": "Language"
