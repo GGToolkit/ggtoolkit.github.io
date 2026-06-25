@@ -1,11 +1,11 @@
 {
   "categories": {
-    "calculators": { "es": "Calculadoras y tests", "en": "Calculators & tests", "icon": "🧮" },
-    "database": { "es": "Bases de datos y guías", "en": "Databases & guides", "icon": "📚" },
-    "codes": { "es": "Códigos de juego", "en": "Game codes", "icon": "🎟️" },
-    "discover": { "es": "Descubrir juegos", "en": "Discover games", "icon": "🎮" },
-    "prices": { "es": "Precios y monedas", "en": "Prices & currency", "icon": "💰" },
-    "hardware": { "es": "PC y hardware", "en": "PC & hardware", "icon": "🖥️" }
+    "calculators": { "es": "Calculadoras y tests", "en": "Calculators & tests", "icon": "🧮", "desc": { "es": "Calculadoras y tests gratis para optimizar tu juego: pity, daño, sensibilidad, reacción y más.", "en": "Free calculators and tests to optimise your play: pity, damage, sensitivity, reaction and more." } },
+    "database": { "es": "Bases de datos y guías", "en": "Databases & guides", "icon": "📚", "desc": { "es": "Bases de datos con builds, personajes y datos al detalle para que no se te escape nada.", "en": "Databases with builds, characters and detailed data so nothing slips by." } },
+    "codes": { "es": "Códigos de juego", "en": "Game codes", "icon": "🎟️", "desc": { "es": "Códigos de canje verificados para conseguir recompensas gratis antes de que caduquen.", "en": "Verified redeem codes to grab free rewards before they expire." } },
+    "discover": { "es": "Descubrir juegos", "en": "Discover games", "icon": "🎮", "desc": { "es": "Encuentra tu próximo juego: títulos parecidos a los que ya te gustan, por mecánicas y no solo por género.", "en": "Find your next game: titles similar to the ones you love, by mechanics, not just genre." } },
+    "prices": { "es": "Precios y monedas", "en": "Prices & currency", "icon": "💰", "desc": { "es": "Compara precios de monedas y descubre si los generadores «gratis» funcionan o son estafa.", "en": "Compare currency prices and find out whether 'free' generators work or are scams." } },
+    "hardware": { "es": "PC y hardware", "en": "PC & hardware", "icon": "🖥️", "desc": { "es": "Decide qué ordenador comprar según tu uso, con análisis honestos y sin afiliados.", "en": "Decide which computer to buy for your use, with honest, affiliate-free analysis." } }
   },
   "tools": [
     {

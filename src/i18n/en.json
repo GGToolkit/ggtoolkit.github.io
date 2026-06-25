@@ -21,6 +21,20 @@
     "intro": "<strong>GGToolkit</strong> was born from a simple idea: every time we play, concrete questions come up —how far am I from that character, will this move KO, is that code still active— and you almost never find a clear, fast answer. So we built a <strong>family of free sites for gamers</strong>, each one expert at solving one of those questions. One brand, many sites, zero filler: find the answer and get back to the game.",
     "featured": "The GGToolkit ecosystem — our gaming sites"
   },
+  "webs": {
+    "h1": "All GGToolkit sites for gamers",
+    "intro": "Our complete ecosystem of free sites for players, organized by category. Each one is independent, no sign-up, and built to solve one specific thing. Pick yours.",
+    "stats": "{n} sites · {c} categories · 100% free",
+    "faqTitle": "Frequently asked questions",
+    "ctaTitle": "Not sure which one you need?",
+    "ctaText": "Tell us your question and we'll point you to the right GGToolkit site.",
+    "faq": [
+      { "q": "Are all the sites free?", "a": "Yes. Every GGToolkit site is free and most need no sign-up." },
+      { "q": "Do I need to install anything?", "a": "No. Everything runs in your browser, on desktop and mobile." },
+      { "q": "How do I pick the site I need?", "a": "They're grouped by category: calculators, databases, codes, game discovery, prices and hardware. Find the category for your question and dive in." },
+      { "q": "Who is behind GGToolkit?", "a": "A team of players building what we'd want to use ourselves. Get to know us on the About page." }
+    ]
+  },
   "ui": {
     "tools": "Sites",
     "about": "About",

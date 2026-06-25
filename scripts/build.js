@@ -120,10 +120,12 @@ function logoMark(tool, cls){
     ? `<img class="${cls}" src="/assets/logos/${tool.slug}.png" alt="${esc(tool.name)}" loading="lazy" width="256" height="256">`
     : `<span class="${cls} mono">${esc(tool.name.replace(/[^A-Za-z]/g,'').slice(0,2).toUpperCase())}</span>`;
 }
-function toolCard(lang, tool) {
+function toolCard(lang, tool, showGames) {
+  const games = showGames && tool.games && tool.games.length
+    ? `<span class="tc-games">${tool.games.slice(0, 3).map((g)=>`<span class="gchip">${esc(g)}</span>`).join('')}</span>` : '';
   return `<a class="tool-card" href="${pTool(lang, tool.slug)}">
 <span class="tc-head">${logoMark(tool, 'logo-img')}<h3>${esc(tool.name)}</h3></span>
-<p>${esc(tool.tagline[lang])}</p>
+<p>${esc(tool.tagline[lang])}</p>${games}
 <span class="cat">${esc(catName(lang, tool.category))}</span></a>`;
 }
 const orgLd = { "@context":"https://schema.org","@type":"Organization","name":"GGToolkit","url":SITE+"/","logo":SITE+"/assets/icons/icon-512.png",
@@ -144,19 +146,28 @@ function homeHTML(lang) {
 }
 function toolsIndexHTML(lang) {
   const t = T[lang];
+  const w = t.webs;
   const alts = {}; cfg.languages.forEach((l) => alts[l] = pTools(l));
+  const cats = Object.keys(CATS).filter((k) => TOOLS.some((x) => x.category === k));
   const itemList = { "@context":"https://schema.org","@type":"ItemList","name":t.meta.toolsTitle,
     "itemListElement": TOOLS.map((x,i)=>({ "@type":"ListItem","position":i+1,"url":SITE+pTool(lang,x.slug),"name":x.name })) };
   const bc = breadcrumbLd(lang,[{name:t.ui.home,path:pHome(lang)},{name:t.ui.tools,path:pTools(lang)}]);
-  const byCat = Object.keys(CATS).map((k) => {
+  const faqLd = { "@context":"https://schema.org","@type":"FAQPage",
+    "mainEntity": w.faq.map((f)=>({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+  const stats = w.stats.replace('{n}', TOOLS.length).replace('{c}', cats.length);
+  const chips = `<nav class="cats">${cats.map((k)=>`<a href="#${k}">${esc(catName(lang,k))}</a>`).join('')}</nav>`;
+  const byCat = cats.map((k) => {
     const list = TOOLS.filter((x) => x.category === k);
-    if (!list.length) return '';
-    return `<section class="section" id="${k}"><h2>${esc(catName(lang, k))}</h2><div class="grid">${list.map((x)=>toolCard(lang,x)).join('')}</div></section>`;
+    const d = CATS[k].desc ? `<p class="cat-desc">${esc(CATS[k].desc[lang])}</p>` : '';
+    return `<section class="section" id="${k}"><h2>${esc(catName(lang, k))}</h2>${d}<div class="grid">${list.map((x)=>toolCard(lang,x,true)).join('')}</div></section>`;
   }).join('');
-  return head(lang, t.meta.toolsTitle, t.meta.toolsDescription, pTools(lang), alts, [itemList, bc])
+  const faqHtml = `<section class="section"><h2>${esc(w.faqTitle)}</h2><dl class="faq">${w.faq.map((f)=>`<dt>${esc(f.q)}</dt><dd>${esc(f.a)}</dd>`).join('')}</dl></section>`;
+  const cta = `<section class="section"><div class="cta-box"><h3>${esc(w.ctaTitle)}</h3><p class="muted">${esc(w.ctaText)}</p><a class="btn primary" href="${pContact(lang)}">${esc(t.ui.contact)} →</a></div></section>`;
+  return head(lang, t.meta.toolsTitle, t.meta.toolsDescription, pTools(lang), alts, [itemList, bc, faqLd])
     + header(lang, 'tools')
     + `<main class="wrap">${crumb(lang,[{name:t.ui.home,path:pHome(lang)},{name:t.ui.tools,path:pTools(lang)}])}
-<section class="hero" style="padding:18px 0 0;text-align:left"><h1>${esc(t.ui.tools)}</h1></section>${byCat}</main>` + footer(lang);
+<section class="hero" style="padding:24px 0 6px;text-align:left"><h1>${esc(w.h1)}</h1><p class="muted" style="max-width:66ch">${esc(w.intro)}</p><p class="stats-line">${esc(stats)}</p></section>
+${chips}${byCat}${faqHtml}${cta}</main>` + footer(lang);
 }
 function toolPageHTML(lang, tool) {
   const t = T[lang];

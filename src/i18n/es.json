@@ -21,6 +21,20 @@
     "intro": "<strong>GGToolkit</strong> nace de una idea simple: cada vez que jugamos aparecen dudas concretas —cuánto me falta para el personaje, si ese ataque mata, si ese código sigue activo— y casi nunca encuentras una respuesta clara y rápida. Por eso creamos una <strong>familia de webs gratuitas para gamers</strong>, cada una experta en resolver una de esas dudas. Una marca, muchas webs, cero relleno: encuentra la respuesta y vuelve a la partida.",
     "featured": "El ecosistema GGToolkit — nuestras webs para gamers"
   },
+  "webs": {
+    "h1": "Todas las webs de GGToolkit para gamers",
+    "intro": "Nuestro ecosistema completo de webs gratuitas para jugadores, organizado por categoría. Cada una es independiente, sin registro y especializada en resolver una cosa concreta. Elige la tuya.",
+    "stats": "{n} webs · {c} categorías · 100% gratis",
+    "faqTitle": "Preguntas frecuentes",
+    "ctaTitle": "¿No sabes cuál necesitas?",
+    "ctaText": "Cuéntanos tu duda y te decimos qué web de GGToolkit te conviene.",
+    "faq": [
+      { "q": "¿Son gratis todas las webs?", "a": "Sí. Todas las webs de GGToolkit son gratuitas y la mayoría no necesitan registro." },
+      { "q": "¿Hay que instalar algo?", "a": "No. Todo funciona en el navegador, en PC y en móvil." },
+      { "q": "¿Cómo elijo la web que necesito?", "a": "Están organizadas por categoría: calculadoras, bases de datos, códigos, descubrir juegos, precios y hardware. Busca la categoría de tu duda y entra." },
+      { "q": "¿Quién está detrás de GGToolkit?", "a": "Un equipo de jugadores que construye lo que a nosotros mismos nos gustaría usar. Puedes conocernos en Sobre nosotros." }
+    ]
+  },
   "ui": {
     "tools": "Webs",
     "about": "Sobre nosotros",
