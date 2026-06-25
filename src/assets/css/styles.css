@@ -121,6 +121,9 @@ strong{color:#0f1119;font-weight:700}
 .footer-cols a{display:block;color:var(--muted);padding:3px 0;font-weight:500}
 .footer-cols a:hover{color:var(--brand)}
 .foot-brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--text);margin-bottom:8px}
+.foot-social{margin-top:12px;font-size:.88rem}
+.foot-social a{display:inline;color:var(--muted);font-weight:600;padding:0}
+.foot-social a:hover{color:var(--brand)}
 
 /* consent banner */
 .consent{position:fixed;left:14px;right:14px;bottom:14px;z-index:50;background:var(--surface);border:1px solid var(--line2);box-shadow:var(--shadow);border-radius:14px;padding:14px 16px;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.88rem}

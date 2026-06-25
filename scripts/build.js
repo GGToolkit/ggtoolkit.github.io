@@ -97,10 +97,12 @@ function footer(lang) {
   const t = T[lang];
   const toolLinks = TOOLS.map((tool) => `<a href="${pTool(lang, tool.slug)}">${esc(tool.name)}</a>`).join('');
   const siteLinks = `<a href="${pTools(lang)}">${esc(t.ui.tools)}</a><a href="${pAbout(lang)}">${esc(t.ui.about)}</a><a href="${pContact(lang)}">${esc(t.ui.contact)}</a><a href="${pMethod(lang)}">${esc(t.ui.methodology)}</a>`;
+  const follow = lang === 'es' ? 'Síguenos' : 'Follow us';
+  const social = cfg.social ? `<div class="foot-social"><span class="muted">${follow}:</span> ${Object.entries(cfg.social).map(([n,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener me">${esc(n)}</a>`).join(' · ')}</div>` : '';
   return `<footer class="site-footer"><div class="wrap">
 <div class="footer-cols">
 <div><div class="foot-brand"><span class="logo" style="width:24px;height:24px;border-radius:7px;display:inline-grid;place-items:center;background:linear-gradient(135deg,#6c5cff,#22d3a6);color:#fff;font-weight:900;font-size:.7rem">GG</span> GGToolkit</div>
-<p class="muted">${esc(t.footer.tagline)}</p></div>
+<p class="muted">${esc(t.footer.tagline)}</p>${social}</div>
 <div><h4>${esc(t.footer.toolsTitle)}</h4>${toolLinks}</div>
 <div><h4>${esc(t.footer.siteTitle)}</h4>${siteLinks}</div>
 </div>
@@ -124,7 +126,8 @@ function toolCard(lang, tool) {
 <p>${esc(tool.tagline[lang])}</p>
 <span class="cat">${esc(catName(lang, tool.category))}</span></a>`;
 }
-const orgLd = { "@context":"https://schema.org","@type":"Organization","name":"GGToolkit","url":SITE+"/","logo":SITE+"/assets/favicon.svg" };
+const orgLd = { "@context":"https://schema.org","@type":"Organization","name":"GGToolkit","url":SITE+"/","logo":SITE+"/assets/icons/icon-512.png",
+  "sameAs": Object.values(cfg.social || {}) };
 
 // --- pages ---
 function homeHTML(lang) {
@@ -210,7 +213,14 @@ function simplePage(lang, kind) {
       "mainEntity":{ "@type":"Organization","name":"GGToolkit","url":SITE+"/","email":cfg.contactEmail } });
     extra = `<p style="margin-top:18px"><a class="btn primary" href="mailto:${esc(cfg.contactEmail)}">${esc(cfg.contactEmail)}</a></p>`;
   } else if (kind === 'about') {
-    extra = `<p><a href="mailto:${esc(cfg.contactEmail)}">${esc(cfg.contactEmail)}</a></p><p style="margin-top:16px"><a class="btn primary" href="${pTools(lang)}">${esc(t.ui.allTools)} →</a></p>`;
+    let founder = '';
+    if (cfg.founder && cfg.founder.linkedin) {
+      lds.push({ "@context":"https://schema.org","@type":"Person","name":cfg.founder.name,"url":cfg.founder.linkedin,
+        "sameAs":[cfg.founder.linkedin],"worksFor":{"@type":"Organization","name":"GGToolkit","url":SITE+"/"} });
+      const lead = lang === 'es' ? 'Detrás de GGToolkit' : 'Behind GGToolkit';
+      founder = `<p class="muted" style="margin-top:14px">${lead}: <strong>${esc(cfg.founder.name)}</strong> · <a href="${esc(cfg.founder.linkedin)}" target="_blank" rel="noopener me">LinkedIn</a></p>`;
+    }
+    extra = `<p><a href="mailto:${esc(cfg.contactEmail)}">${esc(cfg.contactEmail)}</a></p>${founder}<p style="margin-top:16px"><a class="btn primary" href="${pTools(lang)}">${esc(t.ui.allTools)} →</a></p>`;
   } else {
     extra = `<p style="margin-top:16px"><a class="btn" href="${pAbout(lang)}">${esc(t.ui.about)} →</a></p>`;
   }

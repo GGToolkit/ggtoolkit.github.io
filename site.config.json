@@ -5,6 +5,13 @@
   "defaultLang": "es",
   "languages": ["es", "en"],
   "contactEmail": "ggtoolkit.brand@gmail.com",
+  "social": {
+    "X": "https://x.com/GGToolkit",
+    "Instagram": "https://www.instagram.com/ggtoolkit/",
+    "Threads": "https://www.threads.com/@ggtoolkit",
+    "TikTok": "https://www.tiktok.com/@ggtoolkit"
+  },
+  "founder": { "name": "Lluís Mayans", "linkedin": "https://www.linkedin.com/in/lluis-mayans" },
   "lastUpdated": "2026-06-22",
   "gscVerification": "fuMEsHVTue6fr2QUd0qTyFBTDsg9YRkXEgyvo2Wxq3I",
   "ga4Id": ""
