@@ -226,7 +226,7 @@ function rootHTML() {
   return `<!doctype html><html lang="${cfg.defaultLang}"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GGToolkit — Free tools for gamers</title>
-<meta name="description" content="${esc(T[cfg.defaultLang].meta.homeDescription)}">
+<meta name="description" content="${esc(T[cfg.defaultLang].meta.homeDescription)}">${cfg.gscVerification ? `\n<meta name="google-site-verification" content="${esc(cfg.gscVerification)}">` : ''}
 <link rel="canonical" href="${SITE}/">
 ${hl}
 <link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png"><link rel="stylesheet" href="/assets/css/styles.css">
