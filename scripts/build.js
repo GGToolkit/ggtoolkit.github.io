@@ -248,7 +248,45 @@ function sitemap() {
   each(pAbout, '0.3', 'yearly');
   each(pContact, '0.4', 'yearly');
   each(pMethod, '0.3', 'yearly');
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${U.join('\n')}\n</urlset>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${U.join('\n')}\n</urlset>\n`;
+}
+function sitemapXsl(){
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:s="http://www.sitemaps.org/schemas/sitemap/0.9">
+<xsl:output method="html" encoding="UTF-8" indent="yes"/>
+<xsl:template match="/">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Sitemap | GGToolkit</title>
+<style>
+:root{--bg:#faf8f4;--surface:#fff;--text:#1a1c24;--muted:#5d6172;--line:#e9e4da;--brand:#6c5cff;--accent:#10b3c4}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;padding:32px 18px}
+.wrap{max-width:1000px;margin:0 auto}
+.head{display:flex;align-items:center;gap:11px;margin-bottom:6px}
+.logo{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#6c5cff,#22d3a6);display:grid;place-items:center;color:#fff;font-weight:900;font-size:.8rem}
+h1{font-size:1.5rem;margin:0;letter-spacing:-.02em}.sub{color:var(--muted);margin:0 0 22px;font-size:.92rem}
+table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 6px 24px -14px rgba(26,28,46,.25)}
+th{text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:12px 14px;background:#f3f0e9;border-bottom:1px solid var(--line)}
+td{padding:11px 14px;border-bottom:1px solid var(--line);font-size:.9rem;vertical-align:top}
+tr:last-child td{border-bottom:0}tr:hover td{background:#faf8f4}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+.pri{color:var(--accent);font-weight:700}.muted{color:var(--muted)}
+</style></head>
+<body><div class="wrap">
+<div class="head"><span class="logo">GG</span><h1>GGToolkit — Sitemap</h1></div>
+<p class="sub"><xsl:value-of select="count(s:urlset/s:url)"/> URLs · este XML es para buscadores; aquí lo ves en versión legible.</p>
+<table><tr><th>URL</th><th>Última modificación</th><th>Frecuencia</th><th>Prioridad</th></tr>
+<xsl:for-each select="s:urlset/s:url">
+<tr>
+<td><a href="{s:loc}"><xsl:value-of select="s:loc"/></a></td>
+<td class="muted"><xsl:value-of select="s:lastmod"/></td>
+<td class="muted"><xsl:value-of select="s:changefreq"/></td>
+<td class="pri"><xsl:value-of select="s:priority"/></td>
+</tr>
+</xsl:for-each>
+</table>
+</div></body></html>
+</xsl:template>
+</xsl:stylesheet>
+`;
 }
 const robots = () => `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
 const manifest = () => JSON.stringify({ name:'GGToolkit', short_name:'GGToolkit', start_url:'/', display:'standalone', background_color:'#faf8f4', theme_color:'#faf8f4', icons:[{src:'/assets/icons/favicon.svg',sizes:'any',type:'image/svg+xml'},{src:'/assets/icons/icon-192.png',sizes:'192x192',type:'image/png',purpose:'any maskable'},{src:'/assets/icons/icon-512.png',sizes:'512x512',type:'image/png',purpose:'any maskable'}] });
@@ -279,6 +317,7 @@ if (fs.existsSync(OGDIR)) fs.readdirSync(OGDIR).forEach((f) => cp(path.join(OGDI
 const LOGODIR = path.join(SRC, 'assets/logos');
 if (fs.existsSync(LOGODIR)) fs.readdirSync(LOGODIR).forEach((f) => cp(path.join(LOGODIR, f), path.join(DIST, 'assets/logos', f)));
 write(path.join(DIST, 'sitemap.xml'), sitemap());
+write(path.join(DIST, 'sitemap.xsl'), sitemapXsl());
 write(path.join(DIST, 'robots.txt'), robots());
 write(path.join(DIST, 'manifest.webmanifest'), manifest());
 write(path.join(DIST, '.nojekyll'), '');
